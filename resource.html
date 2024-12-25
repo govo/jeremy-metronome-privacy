@@ -105,10 +105,86 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* 主预览区域样式 */
+        .main-section {
+            margin-bottom: 50px;
+        }
+
+        .main-image-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .main-preview {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .sub-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .sub-image-container {
+            width: 100%;
+        }
+
+        .sub-preview {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .sub-preview:hover {
+            transform: scale(1.02);
+        }
+
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .sub-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sub-images {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>主题资源下载 / Theme Resources / テーマリソース</h1>
+    <h1>杰里米节拍器 / Jeremy Metronome / ジェレミーメトロノーム</h1>
+
+    <div class="main-section">
+        <div class="main-image-container">
+            <img src="images/main1.png" alt="主要预览图" class="main-preview">
+        </div>
+        <div class="sub-images">
+            <div class="sub-image-container">
+                <img src="images/1.png" alt="预览图1" class="sub-preview">
+            </div>
+            <div class="sub-image-container">
+                <img src="images/2.png" alt="预览图2" class="sub-preview">
+            </div>
+            <div class="sub-image-container">
+                <img src="images/3.png" alt="预览图3" class="sub-preview">
+            </div>
+            <div class="sub-image-container">
+                <img src="images/4.png" alt="预览图4" class="sub-preview">
+            </div>
+        </div>
+    </div>
+
+    <h2>主题资源下载 / Theme Resources / テーマリソース</h2>
 
     <div class="gallery-grid">
         <div class="gallery-card">
