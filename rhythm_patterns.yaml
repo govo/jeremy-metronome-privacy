@@ -1,4 +1,12 @@
 version: "1.0"
+config:
+  update_urls:
+    primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
+    fallback: "https://gitee.com/govo/jeremy-metronome/raw/master/rhythm_patterns.yaml"
+  update_interval: 86400  # 可选，更新间隔(秒)，默认24小时
+  min_update_interval: 3600  # 可选，最小更新间隔(秒)，默认1小时
+
+
 categories:
 
   
