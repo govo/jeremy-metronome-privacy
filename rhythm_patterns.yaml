@@ -11,6 +11,11 @@ categories:
   
   latin:
     patterns:
+      - id: bossa_nova_base
+        name: Bossa Nova Base
+        description: 巴萨诺瓦节奏
+        pattern: "[4]skmk vmkk skmk vmkv"
+        difficulty: 2
       - id: bossa_nova
         name: Bossa Nova
         description: 巴萨诺瓦节奏
@@ -21,7 +26,6 @@ categories:
         description: 巴萨诺瓦基础节奏，不带休止符
         pattern: "[4]skmk kmkk skmk kmkk"
         difficulty: 2
-
       - id: bossa_nova2
         name: Bossa Nova 2
         description: 巴萨诺瓦基础节奏，带休止符
