@@ -1,4 +1,4 @@
-version: "1.0"
+version: "1.1"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
