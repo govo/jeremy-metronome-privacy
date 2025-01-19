@@ -6,7 +6,6 @@ config:
   update_interval: 86400  # 可选，更新间隔(秒)，默认24小时
   min_update_interval: 3600  # 可选，最小更新间隔(秒)，默认1小时
 
-
 categories:
 
   
