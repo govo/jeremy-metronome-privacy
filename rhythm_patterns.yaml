@@ -1,0 +1,314 @@
+version: "1.0"
+categories:
+
+  
+  latin:
+    patterns:
+      - id: bossa_nova
+        name: Bossa Nova
+        description: 巴萨诺瓦节奏
+        pattern: "[4]skmk vmkk skmk vmkk"
+        difficulty: 2
+      - id: bossa_nova_basic_without_rest
+        name: Bossa Nova Basic Without Rest
+        description: 巴萨诺瓦基础节奏，不带休止符
+        pattern: "[4]skmk kmkk skmk kmkk"
+        difficulty: 2
+
+      - id: bossa_nova2
+        name: Bossa Nova 2
+        description: 巴萨诺瓦基础节奏，带休止符
+        pattern: "[4]sk mk vm kk"
+        difficulty: 2
+      - id: bossa_nova_basic_without_rest2
+        name: Bossa Nova Basic Without Rest2
+        description: 巴萨诺瓦基础节奏，不带休止符
+        pattern: "[4]sk mk km kk"
+        difficulty: 2
+
+      - id: bossa_nova3
+        name: Bossa Nova3
+        description: 巴萨诺瓦节奏3
+        pattern: "[8]sk mk km kk sk km mk kk"
+        difficulty: 2
+        
+  
+  
+  samba:
+    patterns:
+      - id: basic_samba
+        name: Basic Samba
+        description: 基础桑巴节奏
+        pattern: "[4]skmk wmkw wwkk wkwk"
+        difficulty: 1
+      - id: partido_alto
+        name: Partido Alto
+        description: 巴蒂多桑巴节奏
+        pattern: "[4]svmw skmw svmw skmw"
+        difficulty: 2
+  mambo:
+    patterns:
+      - id: basic_mambo
+        name: Basic Mambo
+        description: 基础曼波节奏
+        pattern: "[4]sk km kk mk"
+        difficulty: 1
+
+  rumba:
+    patterns:
+      - id: basic_rumba
+        name: Basic Rumba
+        description: 基础伦巴节奏
+        pattern: "[4]sm mm vm vm"
+        difficulty: 1
+      - id: fast_rumba
+        name: Fast Rumba
+        description: 快速伦巴节奏
+        pattern: "[4]skmm mkmk vkmk vkmk"
+        difficulty: 2
+
+
+  reggae:
+    patterns:
+      - id: basic_reggae
+        name: Basic Reggae
+        description: 基础雷盖节奏
+        pattern: "[4]ws ws ws ws"
+        difficulty: 1
+      - id: one_drop
+        name: One Drop
+        description: 经典 One Drop 节奏
+        pattern: "[4]vkmk vkmw vkmk vkmw"
+        difficulty: 2
+      - id: reggae2
+        name: Reggae2
+        description: 雷盖节奏2
+        pattern: "[8]kkkk skkk mkkm mkkk kkkk mkkk mkkk mkkk"
+        difficulty: 2
+      - id: reggae3
+        name: Reggae3
+        description: 雷盖节奏3
+        pattern: "[16]kkkkskkk mkkmmkkk kkkkmkkk mkkkmkkk"
+        difficulty: 2
+  
+  tejano:
+    patterns:
+      - id: basic_tejano
+        name: Basic Tejano
+        description: 基础特哈诺节奏
+        pattern: "[4]skkm mkmk vkmk mkmk"
+        difficulty: 1
+  
+  lambada:
+    patterns:
+      - id: basic_lambada
+        name: Basic Lambada
+        description: 基础兰巴达节奏
+        pattern: "[4]skkw mkmk skkw mkmk"
+        difficulty: 1 
+  jazz:
+    patterns:
+      - id: swing
+        name: Swing
+        description: 基础摇摆节奏
+        pattern: "[4]smw smw smw smw"
+        difficulty: 1
+      - id: bebop
+        name: Bebop
+        description: 快速摇摆节奏
+        pattern: "[4]svm svm svm svm"
+        difficulty: 2 
+  rock:
+    patterns:
+      - id: basic_rock
+        name: Basic Rock
+        description: 基础摇滚节奏
+        pattern: "[4]skkk skkk skkk skkk"
+        difficulty: 1
+      - id: heavy_metal
+        name: Heavy Metal
+        description: 重金属节奏
+        pattern: "[4]ssss msss ksss msss"
+        difficulty: 2
+      - id: pop_rock
+        name: Pop Rock
+        description: 流行摇滚节奏
+        pattern: "[4]skkk mkvw vwvk vwvw"
+        difficulty: 2
+      - id: pop_rock2
+        name: Pop Rock2
+        description: 流行摇滚节奏2
+        pattern: "[4]skmm kmmm skmm kmmm"
+        difficulty: 2
+      - id: pop_rock3
+        name: Pop Rock3
+        description: 流行摇滚节奏3
+        pattern: "[4]skmk mkmv vvvk vvvv"
+        difficulty: 2
+      - id: pop_rock_split
+        name: Pop Rock Split
+        description: 流行摇滚节奏带切分
+        pattern: "[4]skww kkmk kkkk wkvv"
+        difficulty: 2
+
+  Accent_Shift:
+    patterns:
+      - id: type_1
+        name: Type 1
+        description: 重音移位 1
+        pattern: "[4]swww swww swww swww wsww wsww wsww wsww wwsw wwsw wwsw wwsw wwws wwws wwws wwws"
+        difficulty: 1
+      - id: type_2
+        name: Type 2
+        description: 重音移位 2
+        pattern: "[4]ssww ssww wssw wssw wwss wwss swws swws swsw swsw wsws wsws"
+        difficulty: 1
+      - id: type_3
+        name: Type 3
+        description: 重音移位 3
+        pattern: "[4]ssww ssww wssw wssw wwss wwss swws swws swsw swsw wsws wsws"
+        difficulty: 1
+      - id: type_4
+        name: Type 4
+        description: 重音移位 4
+        pattern: "[4]sssw sssw wsss wsss swss swss ssws ssws"
+        difficulty: 1
+      - id: type_5
+        name: Type 5
+        description: 重音移位 5
+        pattern: "[4]swws wwsw wsww swws"
+        difficulty: 1
+      - id: type_6
+        name: Type 6
+        description: 重音移位 6
+        pattern: "[4]wsww swws wwsw wsww"
+        difficulty: 1
+      - id: type_7
+        name: Type 7
+        description: 重音移位 7
+        pattern: "[4]wwsw wsww swws wwsw"
+        difficulty: 1
+      - id: type_8
+        name: Type 8
+        description: 重音移位 8
+        pattern: "[4]ssww wwww ssww wwww"
+        difficulty: 1
+      - id: type_9
+        name: Type 9
+        description: 重音移位 9
+        pattern: "[4]swsw wwww swsw wwww"
+        difficulty: 1
+      - id: type_10
+        name: Type 10
+        description: 重音移位 10
+        pattern: "[4]swws wwww swws wwww"
+        difficulty: 1
+      - id: type_11
+        name: Type 11
+        description: 重音移位 11
+        pattern: "[4]swww swww swww swww"
+        difficulty: 1
+      - id: type_12
+        name: Type 12
+        description: 重音移位 12
+        pattern: "[4]swww wsww swww wsww"
+        difficulty: 1
+      - id: type_13
+        name: Type 13
+        description: 重音移位 13
+        pattern: "[4]swww wwsw swww wwsw"
+        difficulty: 1
+      - id: type_14
+        name: Type 14
+        description: 重音移位 14
+        pattern: "[4]swww wwws swww wwws"
+        difficulty: 1
+      - id: type_15
+        name: Type 15
+        description: 重音移位 15
+        pattern: "[4]swww wwws swww wwws"
+        difficulty: 1
+      - id: type_16
+        name: Type 16
+        description: 重音移位 16
+        pattern: "[4]ssww wwww ssww wwww"
+        difficulty: 1
+      - id: type_17
+        name: Type 17
+        description: 重音移位 17
+        pattern: "[4]wsws wwww wsws wwww"
+        difficulty: 1
+      - id: type_18
+        name: Type 18
+        description: 重音移位 18
+        pattern: "[4]wsww swww wsww swww"
+        difficulty: 1
+      - id: type_19
+        name: Type 19
+        description: 重音移位 19
+        pattern: "[4]wsww wwsw wsww wwsw"
+        difficulty: 1
+      - id: type_20
+        name: Type 20
+        description: 重音移位 20
+        pattern: "[4]wwss wwww wwss wwww"
+        difficulty: 1
+
+  Syncopation_and_Dotted:
+    patterns:
+      - id: sixteenth_eighth
+        name: Sixteenth Eighth
+        description: 前16后8
+        pattern: "[4]sssk sssk sssk sssk"
+        difficulty: 1
+      - id: eighth_sixteenth
+        name: Eighth Sixteenth
+        description: 前8后16
+        pattern: "[4]skss skss skss skss"
+        difficulty: 1
+      - id: split_sixteenth_eighth
+        name: Split Sixteenth Eighth
+        description: 切分十六分音符与八分音符
+        pattern: "[4]ssks ssks ssks ssks"
+        difficulty: 1
+      - id: dotted
+        name: Dotted
+        description: 附点
+        pattern: "[4]skks skks skks skks"
+        difficulty: 1
+      - id: dotted_after
+        name: Dotted After
+        description: 后附点
+        pattern: "[4]sskk sskk sskk sskk"
+        difficulty: 1
+      - id: mixed_1
+        name: Mixed 1
+        description: 混合1
+        pattern: "[4]skkk sksk skss skkk ssks sksk sssk skkk"
+        difficulty: 1
+      - id: mixed_2
+        name: Mixed 2
+        description: 混合2
+        pattern: "[4]ssss skkk ssss sksk skks sksk sksk skss"
+        difficulty: 1
+      - id: mixed_3
+        name: Mixed 3
+        description: 混合3
+        pattern: "[4]sksk sskk ssss sskk sssk sssk ssss skkk"
+        difficulty: 1
+      - id: mixed_4
+        name: Mixed 4
+        description: 混合4
+        pattern: "[4]skks skks sksk skkk sksk ssks sssk ssss"
+        difficulty: 1
+      - id: mixed_5
+        name: Mixed 5
+        description: 混合5
+        pattern: "[4]ssss skks sskk skkk skss sksk skks ssks"
+        difficulty: 1
+      - id: mixed_6
+        name: Mixed 6
+        description: 混合6
+        pattern: "[4]skks skkk ssks sksk sskk skss sksk sskk"
+        difficulty: 1
+
