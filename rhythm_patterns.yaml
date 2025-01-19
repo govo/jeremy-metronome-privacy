@@ -1,4 +1,4 @@
-version: "1.2"
+version: "1.3"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -15,11 +15,6 @@ categories:
         name: Bossa Nova Base2
         description: 巴萨诺瓦节奏
         pattern: "[4]skmk vmkk skmk vmvv"
-        difficulty: 2
-      - id: bossa_nova_base
-        name: Bossa Nova Base
-        description: 巴萨诺瓦节奏
-        pattern: "[4]skmk vmkk skmk vmkv"
         difficulty: 2
       - id: bossa_nova
         name: Bossa Nova
