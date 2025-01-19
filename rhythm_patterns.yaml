@@ -3,8 +3,8 @@ config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
     fallback: "https://gitee.com/govo/jeremy-metronome/raw/master/rhythm_patterns.yaml"
-  update_interval: 86400  # 可选，更新间隔(秒)，默认24小时
-  min_update_interval: 3600  # 可选，最小更新间隔(秒)，默认1小时
+  update_interval: 600  # 可选，更新间隔(秒)，默认24小时
+  min_update_interval: 60  # 可选，最小更新间隔(秒)，默认1小时
 
 categories:
 
@@ -20,22 +20,6 @@ categories:
         name: Bossa Nova Basic Without Rest
         description: 巴萨诺瓦基础节奏，不带休止符
         pattern: "[4]skmk kmkk skmk kmkk"
-        difficulty: 2
-      - id: bossa_nova2
-        name: Bossa Nova 2
-        description: 巴萨诺瓦基础节奏，带休止符
-        pattern: "[4]sk mk vm kk"
-        difficulty: 2
-      - id: bossa_nova_basic_without_rest2
-        name: Bossa Nova Basic Without Rest2
-        description: 巴萨诺瓦基础节奏，不带休止符
-        pattern: "[4]sk mk km kk"
-        difficulty: 2
-
-      - id: bossa_nova3
-        name: Bossa Nova3
-        description: 巴萨诺瓦节奏3
-        pattern: "[8]sk mk km kk sk km mk kk"
         difficulty: 2
         
   
