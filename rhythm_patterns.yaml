@@ -1,4 +1,4 @@
-version: "1.7"
+version: "1.8"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -14,29 +14,29 @@ categories:
       - id: bossa_nova
         name: Bossa Nova
         description: 巴萨诺瓦节奏
-        pattern: "[4]skmk vmkk skmk vmkk"
+        pattern: "[4]srmr vmrr srmr vmrr"
         difficulty: 2
       - id: bossa_nova_basic_without_rest
         name: Bossa Nova Basic Without Rest
         description: 巴萨诺瓦基础节奏，不带休止符
-        pattern: "[4]skmk kmkk skmk kmkk"
+        pattern: "[4]srmr rmrr srmr rmrr"
         difficulty: 2
 
       - id: bossa_nova2
         name: Bossa Nova 2
         description: 巴萨诺瓦基础节奏，带休止符
-        pattern: "[4]sk mk vm kk"
+        pattern: "[4]sr mr vm rr"
         difficulty: 2
       - id: bossa_nova_basic_without_rest2
         name: Bossa Nova Basic Without Rest2
         description: 巴萨诺瓦基础节奏，不带休止符
-        pattern: "[4]sk mk km kk"
+        pattern: "[4]sr mr rm rr"
         difficulty: 2
 
       - id: bossa_nova3
         name: Bossa Nova3
         description: 巴萨诺瓦节奏3
-        pattern: "[8]sk mk km kk sk km mk kk"
+        pattern: "[8]sr mr rm rr sr rm mr rr"
         difficulty: 2
         
   
@@ -46,19 +46,19 @@ categories:
       - id: basic_samba
         name: Basic Samba
         description: 基础桑巴节奏
-        pattern: "[4]skmk wmkw wwkk wkwk"
+        pattern: "[4]srmr wmrw wwrr wrwr"
         difficulty: 1
       - id: partido_alto
         name: Partido Alto
         description: 巴蒂多桑巴节奏
-        pattern: "[4]svmw skmw svmw skmw"
+        pattern: "[4]svmw srmw svmw srmw"
         difficulty: 2
   mambo:
     patterns:
       - id: basic_mambo
         name: Basic Mambo
         description: 基础曼波节奏
-        pattern: "[4]sk km kk mk"
+        pattern: "[4]sr rm rr mr"
         difficulty: 1
 
   rumba:
@@ -71,7 +71,7 @@ categories:
       - id: fast_rumba
         name: Fast Rumba
         description: 快速伦巴节奏
-        pattern: "[4]skmm mkmk vkmk vkmk"
+        pattern: "[4]srmm mrmr vrmr vrmr"
         difficulty: 2
 
 
@@ -85,17 +85,17 @@ categories:
       - id: one_drop
         name: One Drop
         description: 经典 One Drop 节奏
-        pattern: "[4]vkmk vkmw vkmk vkmw"
+        pattern: "[4]vrmr vrmw vrmr vrmw"
         difficulty: 2
       - id: reggae2
         name: Reggae2
         description: 雷盖节奏2
-        pattern: "[8]kkkk skkk mkkm mkkk kkkk mkkk mkkk mkkk"
+        pattern: "[8]rrrr srrr mrrm mrrr rrrr mrrr mrrr mrrr"
         difficulty: 2
       - id: reggae3
         name: Reggae3
         description: 雷盖节奏3
-        pattern: "[16]skkkmkkk mkkmmkkk kkkkmkkk mkkkmkkk"
+        pattern: "[16]srrrmrrr mrrmmrrr rrrrmrrr mrrrmrrr"
         difficulty: 2
   
   tejano:
@@ -103,7 +103,7 @@ categories:
       - id: basic_tejano
         name: Basic Tejano
         description: 基础特哈诺节奏
-        pattern: "[4]skkm mkmk vkmk mkmk"
+        pattern: "[4]srrm mrmr vrmr mrmr"
         difficulty: 1
   
   lambada:
@@ -111,7 +111,7 @@ categories:
       - id: basic_lambada
         name: Basic Lambada
         description: 基础兰巴达节奏
-        pattern: "[4]skkw mkmk skkw mkmk"
+        pattern: "[4]srrw mrmr srrw mrmr"
         difficulty: 1 
   jazz:
     patterns:
@@ -130,32 +130,32 @@ categories:
       - id: basic_rock
         name: Basic Rock
         description: 基础摇滚节奏
-        pattern: "[4]skkk skkk skkk skkk"
+        pattern: "[4]srrr srrr srrr srrr"
         difficulty: 1
       - id: heavy_metal
         name: Heavy Metal
         description: 重金属节奏
-        pattern: "[4]ssss msss ksss msss"
+        pattern: "[4]ssss msss rsss msss"
         difficulty: 2
       - id: pop_rock
         name: Pop Rock
         description: 流行摇滚节奏
-        pattern: "[4]skkk mkvw vwvk vwvw"
+        pattern: "[4]srrr mrvw vwvr vwvw"
         difficulty: 2
       - id: pop_rock2
         name: Pop Rock2
         description: 流行摇滚节奏2
-        pattern: "[4]skmm kmmm skmm kmmm"
+        pattern: "[4]srmm rmmm srmm rmmm"
         difficulty: 2
       - id: pop_rock3
         name: Pop Rock3
         description: 流行摇滚节奏3
-        pattern: "[4]skmk mkmv vvvk vvvv"
+        pattern: "[4]srmr mrmv vvvr vvvv"
         difficulty: 2
       - id: pop_rock_split
         name: Pop Rock Split
         description: 流行摇滚节奏带切分
-        pattern: "[4]skww kkmk kkkk wkvv"
+        pattern: "[4]srww rrmr rrrr wrvv"
         difficulty: 2
 
   Accent_Shift:
@@ -266,56 +266,56 @@ categories:
       - id: sixteenth_eighth
         name: Sixteenth Eighth
         description: 前16后8
-        pattern: "[4]sssk sssk sssk sssk"
+        pattern: "[4]sssr sssr sssr sssr"
         difficulty: 1
       - id: eighth_sixteenth
         name: Eighth Sixteenth
         description: 前8后16
-        pattern: "[4]skss skss skss skss"
+        pattern: "[4]srss srss srss srss"
         difficulty: 1
       - id: split_sixteenth_eighth
         name: Split Sixteenth Eighth
         description: 切分十六分音符与八分音符
-        pattern: "[4]ssks ssks ssks ssks"
+        pattern: "[4]ssrs ssrs ssrs ssrs"
         difficulty: 1
       - id: dotted
         name: Dotted
         description: 附点
-        pattern: "[4]skks skks skks skks"
+        pattern: "[4]srrs srrs srrs srrs"
         difficulty: 1
       - id: dotted_after
         name: Dotted After
         description: 后附点
-        pattern: "[4]sskk sskk sskk sskk"
+        pattern: "[4]ssrr ssrr ssrr ssrr"
         difficulty: 1
       - id: mixed_1
         name: Mixed 1
         description: 混合1
-        pattern: "[4]skkk sksk skss skkk ssks sksk sssk skkk"
+        pattern: "[4]srrr srsr srss srrr ssrs srsr sssr srrr"
         difficulty: 1
       - id: mixed_2
         name: Mixed 2
         description: 混合2
-        pattern: "[4]ssss skkk ssss sksk skks sksk sksk skss"
+        pattern: "[4]ssss srrr ssss srsr srrs srsr srsr srss"
         difficulty: 1
       - id: mixed_3
         name: Mixed 3
         description: 混合3
-        pattern: "[4]sksk sskk ssss sskk sssk sssk ssss skkk"
+        pattern: "[4]srsr ssrr ssss ssrr sssr sssr ssss srrr"
         difficulty: 1
       - id: mixed_4
         name: Mixed 4
         description: 混合4
-        pattern: "[4]skks skks sksk skkk sksk ssks sssk ssss"
+        pattern: "[4]srrs srrs srsr srrr srsr ssrs sssr ssss"
         difficulty: 1
       - id: mixed_5
         name: Mixed 5
         description: 混合5
-        pattern: "[4]ssss skks sskk skkk skss sksk skks ssks"
+        pattern: "[4]ssss srrs ssrr srrr srss srsr srrs ssrs"
         difficulty: 1
       - id: mixed_6
         name: Mixed 6
         description: 混合6
-        pattern: "[4]skks skkk ssks sksk sskk skss sksk sskk"
+        pattern: "[4]srrs srrr ssrs srsr ssrr srss srsr ssrr"
         difficulty: 1
 
