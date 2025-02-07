@@ -111,23 +111,152 @@
             margin-bottom: 50px;
         }
 
-        .main-image-container {
+        .carousel-container {
+            position: relative;
             width: 100%;
             margin-bottom: 20px;
-        }
-
-        .main-preview {
-            width: 100%;
-            height: auto;
-            display: block;
+            overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .sub-images {
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 16px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+        }
+
+        .sub-images-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .sub-images-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .sub-images-slide {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        .sub-image-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
+            padding: 10px;
+        }
+
+        .sub-images-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+
+        .sub-images-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .sub-images-button.prev {
+            left: 10px;
+        }
+
+        .sub-images-button.next {
+            right: 10px;
+        }
+
+        .sub-images-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .sub-images-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sub-images-dot.active {
+            background: white;
         }
 
         .sub-image-container {
@@ -183,26 +312,137 @@
             text-decoration: underline;
         }
     </style>
+    <script src="js/carousel.js"></script>
+    <script src="js/sub-images-carousel.js"></script>
 </head>
 <body>
+    <div class="special-event-link">
+        <a href="#special-event">
+            🎁 特别活动通知 / Special Event Notice / 特別なお知らせ 🎁
+        </a>
+    </div>
+    <style>
+        .special-event-link {
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        .special-event-link a {
+            color: #ff4757;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #ff4757;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .special-event-link a:hover {
+            background-color: #ff4757;
+            color: white;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
     <h1>杰里米节拍器 / Jeremy Metronome / ジェレミーメトロノーム</h1>
 
     <div class="main-section">
-        <div class="main-image-container">
-            <img src="images/main1.png" alt="主要预览图" class="main-preview">
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide">
+                    <img src="images/screenshoot/main1.png" alt="主要预览图 1" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/screenshoot/main2.png" alt="主要预览图 2" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/screenshoot/main3.png" alt="主要预览图 3" class="carousel-image">
+                </div>
+            </div>
+            <button class="carousel-button prev">❮</button>
+            <button class="carousel-button next">❯</button>
+            <div class="carousel-dots"></div>
         </div>
         <div class="sub-images">
-            <div class="sub-image-container">
-                <img src="images/1.png" alt="预览图1" class="sub-preview">
-            </div>
-            <div class="sub-image-container">
-                <img src="images/2.png" alt="预览图2" class="sub-preview">
-            </div>
-            <div class="sub-image-container">
-                <img src="images/3.png" alt="预览图3" class="sub-preview">
-            </div>
-            <div class="sub-image-container">
-                <img src="images/4.png" alt="预览图4" class="sub-preview">
+            <div class="sub-images-container">
+                <div class="sub-images-wrapper">
+                    <div class="sub-images-slide">
+                        <div class="sub-image-grid">
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_6.png" alt="预览图1" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_7.png" alt="预览图2" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_8.png" alt="预览图3" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_9.png" alt="预览图4" class="sub-preview">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-images-slide">
+                        <div class="sub-image-grid">
+                            
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_songlist.png" alt="预览图13" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_sound.png" alt="预览图14" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_timer.png" alt="预览图15" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_wave.png" alt="预览图16" class="sub-preview">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub-images-slide">
+                        <div class="sub-image-grid">
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_pratices.png" alt="预览图11" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_rhytems.png" alt="预览图12" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_14.png" alt="预览图9" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_15.png" alt="预览图10" class="sub-preview">
+                            </div>
+                           
+                        </div>
+                    </div>
+                 
+                    <div class="sub-images-slide">
+                        <div class="sub-image-grid">
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_10.png" alt="预览图5" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_11.png" alt="预览图6" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_12.png" alt="预览图7" class="sub-preview">
+                            </div>
+                            <div class="sub-image-container">
+                                <img src="images/screenshoot/iphone_13.png" alt="预览图8" class="sub-preview">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <button class="sub-images-button prev">❮</button>
+                <button class="sub-images-button next">❯</button>
+                <div class="sub-images-dots"></div>
             </div>
         </div>
         <div class="contact-info">
@@ -212,6 +452,128 @@
             <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>
         </div>
     </div>
+
+    <div class="notice-section" id="special-event">
+        <h2>🎁 特别活动通知 / Special Event Notice / 特別なお知らせ</h2>
+        <div class="notice-content">
+            <!-- 中文部分 -->
+            <div class="notice-section-zh">
+                <h3>🎁 特别活动通知</h3>
+                <p>感谢您一直以来对杰里米节拍器的支持与厚爱！为了回馈广大用户的信任，我们特别推出以下回馈活动：</p>
+                <p>1.3.0版本及之前下载的用户，将获得终身会员资格！</p>
+                <div class="notice-details">
+                    <p>📧 请发送以下内容至：</p>
+                    <p class="email">govomusic@gmail.com</p>
+                    <p>✅ 需要提供：</p>
+                    <ul>
+                        <li>订单截图（含订单号和购买日期）</li>
+                        <li>邮件标题格式：[终身会员申请] 您的订单号</li>
+                    </ul>
+                    <p>⏱️ 我们将在2025年5月1日前完成所有兑换码的发放。</p>
+                    <p class="refund-notice">⚠️ 重要提示：如果您已经申请退款，将无法参与此活动。</p>
+                </div>
+            </div>
+
+            <!-- English Section -->
+            <div class="notice-section-en">
+                <h3>🎁 Special Event Notice</h3>
+                <p>Thank you for your continuous support and love for Jeremy Metronome! To express our gratitude to our valued users, we are excited to announce this special reward:</p>
+                <p>Users who downloaded version 1.3.0 or earlier will receive a lifetime membership!</p>
+                <div class="notice-details">
+                    <p>📧 Please send the following to:</p>
+                    <p class="email">govomusic@gmail.com</p>
+                    <p>✅ Required information:</p>
+                    <ul>
+                        <li>Order screenshot (with order number and purchase date)</li>
+                        <li>Email subject format: [Lifetime Membership] Your order number</li>
+                    </ul>
+                    <p>⏱️ We will complete the distribution of all redemption codes before May 1, 2025.</p>
+                    <p class="refund-notice">⚠️ Important: If you have requested a refund, you will not be eligible for this promotion.</p>
+                </div>
+            </div>
+
+            <!-- 日本語セクション -->
+            <div class="notice-section-jp">
+                <h3>🎁 特別なお知らせ</h3>
+                <p>日頃よりジェレミーメトロノームをご愛顧いただき、誠にありがとうございます！ユーザーの皆様への感謝の気持ちを込めて、以下の特別なプレゼントをご用意いたしました：</p>
+                <p>バージョン1.3.0以前にダウンロードされたユーザーは、ライフタイムメンバーシップを取得できます！</p>
+                <div class="notice-details">
+                    <p>📧 以下の内容を送信してください：</p>
+                    <p class="email">govomusic@gmail.com</p>
+                    <p>✅ 必要な情報：</p>
+                    <ul>
+                        <li>注文のスクリーンショット（注文番号と購入日を含む）</li>
+                        <li>メールタイトル：[ライフタイム会員申請] 注文番号</li>
+                    </ul>
+                    <p>⏱️ 2025年5月1日までに全ての交換コードの配布を完了いたします。</p>
+                    <p class="refund-notice">⚠️ 重要：返金をご申請された場合、このキャンペーンにはご参加いただけません。</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <style>
+        .notice-section {
+            background-color: #fff8f8;
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .notice-section h2 {
+            color: #ff4757;
+            text-align: center;
+            margin-top: 0;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 15px;
+        }
+
+        .notice-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .notice-content p {
+            margin: 10px 0;
+        }
+
+        .notice-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .notice-details .email {
+            color: #ff4757;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .notice-details ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .notice-details li {
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+
+        .refund-notice {
+            color: #ff0000;
+            font-weight: bold;
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ff0000;
+            border-radius: 4px;
+            background-color: #fff0f0;
+        }
+    </style>
 
     <h2>主题资源下载 / Theme Resources / テーマリソース</h2>
 
@@ -272,4 +634,4 @@
         </div>
     </div>
 </body>
-</html> 
+</html>
