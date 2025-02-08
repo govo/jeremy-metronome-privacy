@@ -1,4 +1,4 @@
-version: "1.8"
+version: "1.9"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -156,6 +156,21 @@ categories:
         name: Pop Rock Split
         description: 流行摇滚节奏带切分
         pattern: "[4]srww rrmr rrrr wrvv"
+        difficulty: 2
+      - id: beginner_rock_count_1
+        name: Beginner Rock Count 1
+        description: 初学级流行摇滚节奏
+        pattern: "[4]s1 s2 k s4"
+        difficulty: 2
+      - id: beginner_rock_count_2
+        name: Beginner Rock Count 2
+        description: 初学级流行摇滚节奏2
+        pattern: "[4]s1r s2n rn s4r"
+        difficulty: 2
+      - id: beginner_rock_count_3
+        name: Beginner Rock Count 3
+        description: 初学级流行摇滚节奏3
+        pattern: "[4]s1r s2n s3n s4r"
         difficulty: 2
 
   Accent_Shift:
