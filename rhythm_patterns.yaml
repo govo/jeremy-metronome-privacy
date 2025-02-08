@@ -336,6 +336,21 @@ categories:
       - id: Syncopated_Quarters
         name: Syncopated Quarters
         description: Syncopated Quarters
+        pattern: "[4]sm rm rm rm rm rm rm rm"
+        difficulty: 1
+      - id: Syncopated_Quarters_rest
+        name: Syncopated Quarters With Rest
+        description: Syncopated Quarters With Rest
         pattern: "[4]sm rm rm rm vm rm rm rm"
+        difficulty: 1
+      - id: Syncopated_Quarters2
+        name: Syncopated Quarters 2
+        description: Syncopated Quarters 2
+        pattern: "[4]sm rm mr mr rr mm mr rr"
+        difficulty: 1
+      - id: Syncopated_Quarters2_rest
+        name: Syncopated Quarters 2 With Rest
+        description: Syncopated Quarters 2  With Rest
+        pattern: "[4]sm rm mr mr vr mm mr rr"
         difficulty: 1
 
