@@ -1,4 +1,4 @@
-version: "2.0"
+version: "2.1"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -157,11 +157,11 @@ categories:
         description: 流行摇滚节奏带切分
         pattern: "[4]srww rrmr rrrr wrvv"
         difficulty: 2
-      - id: beginner_rock_count_1
-        name: Beginner Rock Count 1
-        description: 初学级流行摇滚节奏
-        pattern: "[4]s1 s2 k s4"
-        difficulty: 2
+      # - id: beginner_rock_count_1
+      #   name: Beginner Rock Count 1
+      #   description: 初学级流行摇滚节奏
+      #   pattern: "[4]s1 s2 k s4"
+      #   difficulty: 2
       - id: beginner_rock_count_2
         name: Beginner Rock Count 2
         description: 初学级流行摇滚节奏2
