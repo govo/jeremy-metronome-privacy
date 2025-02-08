@@ -333,4 +333,9 @@ categories:
         description: 混合6
         pattern: "[4]srrs srrr ssrs srsr ssrr srss srsr ssrr"
         difficulty: 1
+      - id: Syncopated_Quarters
+        name: Syncopated Quarters
+        description: Syncopated Quarters
+        pattern: "[4]sm rm rm rm vm rm rm rm"
+        difficulty: 1
 
