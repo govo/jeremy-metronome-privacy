@@ -1,4 +1,4 @@
-version: "2.1"
+version: "2.2"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -353,4 +353,35 @@ categories:
         description: Syncopated Quarters 2  With Rest
         pattern: "[4]sm rm mr mr vr mm mr rr"
         difficulty: 1
-
+  Polyrhythm:
+    patterns:
+      - id: 3_against_4
+        name: 3 against 4
+        description: 3 against 4
+        pattern: "[4]srrw mrwr mwrr"
+        difficulty: 1
+      - id: 4_againsth_3
+        name: 4 against 3
+        description: 4 against 3
+        pattern: "[4]srr mwr mrw mrr"
+        difficulty: 1
+      - id: 2_against_3
+        name: 2 against 3
+        description: 2 against 3
+        pattern: "[4]srv mvr"
+        difficulty: 1
+      - id: 3_against_2
+        name: 3 against 2
+        description: 3 against 2
+        pattern: "[4]sr mv mr"
+        difficulty: 1
+      - id: 5_against_4
+        name: 5 against 4
+        description: 5 against 4
+        pattern: "[4]srrr mwrr mrwr mrrw mrrr"
+        difficulty: 1
+      - id: 4_against_5
+        name: 4 against 5
+        description: 4 against 5
+        pattern: "[4]srrrw mrrwr mrwrr mwrrr"
+        difficulty: 1
