@@ -1,4 +1,4 @@
-version: "2.4"
+version: "2.5"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -180,7 +180,7 @@ categories:
       - id: love_you
         name: 喜欢你 SOLO
         description: 喜欢你 SOLO
-        pattern: "[4]mmsm msmm smms mmsm"
+        pattern: "[4]swmw wmww mwwm wwmw"
         difficulty: 2
 
   Accent_Shift:
