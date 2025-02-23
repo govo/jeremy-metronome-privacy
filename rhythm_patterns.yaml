@@ -1,4 +1,4 @@
-version: "2.2"
+version: "2.4"
 config:
   update_urls:
     primary: "https://raw.githubusercontent.com/govo/jeremy-metronome-privacy/refs/heads/main/rhythm_patterns.yaml"
@@ -171,6 +171,16 @@ categories:
         name: Beginner Rock Count 3
         description: 初学级流行摇滚节奏3
         pattern: "[4]sr mv mv wr"
+        difficulty: 2
+      - id: beginner_rock_count_4
+        name: Beginner Rock Count 4
+        description: 初学级流行摇滚节奏4
+        pattern: "[4]smww mmww mmww mmww"
+        difficulty: 2
+      - id: love_you
+        name: 喜欢你 SOLO
+        description: 喜欢你 SOLO
+        pattern: "[4]mmsm msmm smms mmsm"
         difficulty: 2
 
   Accent_Shift:
