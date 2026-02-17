@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八字缘 - 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(168, 85, 247, 0.3);
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .contact-banner {
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0 30px;
+            color: white;
+        }
+
+        .contact-banner .label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .contact-banner .email {
+            font-size: 22px;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        .contact-banner a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-banner a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #444;
+            margin: 30px 0 15px;
+            padding-left: 15px;
+            border-left: 4px solid #a855f7;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, #f3e8ff 0%, #eff6ff 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            color: #444;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-item h3::before {
+            content: "Q";
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            padding-left: 34px;
+            color: #666;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f3e8ff 0%, #eff6ff 100%);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature-card .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h4 {
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 0;
+        }
+
+        .disclaimer {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .disclaimer h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer p {
+            color: #92400e;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #a855f7;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .contact-banner .email {
+                font-size: 18px;
+            }
+
+            .app-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">
+                <img src="images/mac_128@2x.min.png" alt="八字缘 Logo">
+            </div>
+            <h1>八字缘 技术支持</h1>
+            <div class="subtitle">Destiny8 Support</div>
+        </div>
+
+        <div class="contact-banner">
+            <div class="label">联系邮箱</div>
+            <div class="email">
+                <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>
+            </div>
+        </div>
+
+        <h2>应用介绍</h2>
+        <p>八字缘是一款融合传统八字文化与AI智能分析的应用，帮助您了解性格特质，探索人际关系的契合程度。</p>
+
+        <div class="feature-list">
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h4>我的八字</h4>
+                <p>了解你的性格密码</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💑</div>
+                <h4>配对测试</h4>
+                <p>测试两人契合程度</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">✨</div>
+                <h4>最佳匹配</h4>
+                <p>发现契合的组合</p>
+            </div>
+        </div>
+
+        <h2>常见问题</h2>
+
+        <div class="faq-item">
+            <h3>八字计算需要什么信息？</h3>
+            <p>只需要您的出生年月日和具体时间。时间越准确，分析结果越精确。建议尽量使用准确的出生时间。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>我的数据安全吗？</h3>
+            <p>非常安全。所有数据都在您的设备本地处理和存储，我们不会收集或传输任何个人数据到服务器。应用不会保存您的任何信息。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>为什么需要输入出生时间？</h3>
+            <p>八字由年、月、日、时四柱组成，每柱包含天干和地支。出生时间决定了时柱，对性格分析有重要影响。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>不知道准确的出生时间怎么办？</h3>
+            <p>可以使用默认时间（如中午12点）进行分析。虽然没有准确时间精确，但仍可提供有价值的参考信息。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>配对测试的分数如何解读？</h3>
+            <p>契合度分数基于八字五行、天干地支关系计算得出。分数仅供参考，真正的感情需要双方的理解与经营。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>应用会保存我的数据吗？</h3>
+            <p>不会。应用不会保存任何您的个人信息，所有数据仅在应用运行时存在于设备内存中，应用关闭后自动清除。</p>
+        </div>
+
+        <div class="disclaimer">
+            <h3>⚠️ 免责声明</h3>
+            <p>本应用仅供娱乐和文化体验参考。分析结果基于传统八字文化，不构成任何科学结论或决策建议。请理性看待分析结果，不要将其作为人生重大决策的依据。</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Govo Studio. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy-policy.html">隐私政策</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
