@@ -1,0 +1,129 @@
+# 商品配置文件
+# 支持多语言和不同平台的商品配置
+
+# 商品类型定义
+product_types:
+  subscription: "subscription"  # 订阅类型
+  one_time: "one_time"          # 一次性购买类型
+
+# 默认商品配置
+products:
+  - id: "week"
+    type: "subscription"
+    price: "¥6"
+    duration: "7 days"
+    is_popular: false
+    titles:
+      zh: "每周会员"
+      en: "Weekly"
+      ja: "週間会員"
+    descriptions:
+      zh: "每周自动续费"
+      en: "Auto-renews weekly"
+      ja: "毎週自動更新"
+    sub_descriptions:
+      zh: "体验会员功能"
+      en: "Try premium features"
+      ja: "プレミアム機能を試す"
+
+  - id: "month"
+    type: "subscription"
+    price: "¥8"
+    duration: "30 days"
+    is_popular: false
+    titles:
+      zh: "月度会员"
+      en: "Monthly"
+      ja: "月間会員"
+    descriptions:
+      zh: "每月自动续费"
+      en: "Auto-renews monthly"
+      ja: "毎月自動更新"
+    sub_descriptions:
+      zh: "灵活的选择"
+      en: "Flexible choice"
+      ja: "柔軟な選択"
+
+  - id: "quaterly"
+    type: "subscription"
+    price: "¥21"
+    duration: "90 days"
+    is_popular: false
+    titles:
+      zh: "季度会员"
+      en: "Quarterly"
+      ja: "四半期会員"
+    descriptions:
+      zh: "每季度自动续费，相当于每月¥7"
+      en: "Auto-renews quarterly, equals to ¥7/month"
+      ja: "四半期ごとに自動更新、月額¥7相当"
+    sub_descriptions:
+      zh: "省钱的选择"
+      en: "Save money"
+      ja: "お得な選択"
+
+  - id: "annual"
+    type: "subscription"
+    price: "¥58"
+    duration: "365 days"
+    is_popular: false
+    titles:
+      zh: "年度会员"
+      en: "Yearly"
+      ja: "年間会員"
+    descriptions:
+      zh: "每年自动续费，相当于每月¥4.8"
+      en: "Auto-renews yearly, equals to ¥4.8/month"
+      ja: "毎年自動更新、月額¥4.8相当"
+    sub_descriptions:
+      zh: "最具性价比"
+      en: "Best value"
+      ja: "最高のコスパ"
+
+  - id: "lifetime"
+    type: "one_time"
+    price: "¥148"
+    duration: "forever"
+    is_popular: true
+    titles:
+      zh: "终身会员"
+      en: "Lifetime"
+      ja: "永久会員"
+    descriptions:
+      zh: "一次付费，永久使用"
+      en: "One-time payment, lifetime access"
+      ja: "一回払い、永久使用"
+    sub_descriptions:
+      zh: "永久解锁所有功能"
+      en: "Unlock all features forever"
+      ja: "すべての機能を永久に解除"
+
+# 平台特定的商品ID配置
+# 这些ID将被发送到各平台的原生代码中进行映射
+# 注意：这些ID必须与各平台商店中配置的ID一致
+
+# Google Play商品ID
+googleplay_product_ids:
+  - id: "week"
+    platform_id: "weekly"
+  - id: "month"
+    platform_id: "monthly"
+  - id: "quaterly"
+    platform_id: "quarterly"
+  - id: "annual"
+    platform_id: "annual"
+  - id: "lifetime"
+    platform_id: "lifetime"
+
+# Apple商品ID
+apple_product_ids:
+  - id: "week"
+    platform_id: "week"
+  - id: "month"
+    platform_id: "month"
+  - id: "quaterly"
+    platform_id: "quaterly"
+  - id: "annual"
+    platform_id: "annual"
+  - id: "lifetime"
+    platform_id: "lifetime"
