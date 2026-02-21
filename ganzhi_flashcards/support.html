@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天干地支学习卡 - 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .lang-switch a {
+            color: #10b981;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+            border: 1px solid #10b981;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .lang-switch a:hover {
+            background: #10b981;
+            color: white;
+        }
+
+        .contact-banner {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0 30px;
+            color: white;
+        }
+
+        .contact-banner .label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .contact-banner .email {
+            font-size: 22px;
+            font-weight: 600;
+            word-break: break-all;
+        }
+
+        .contact-banner a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-banner a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #444;
+            margin: 30px 0 15px;
+            padding-left: 15px;
+            border-left: 4px solid #10b981;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            color: #444;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-item h3::before {
+            content: "Q";
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            padding-left: 34px;
+            color: #666;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #d1fae5 0%, #dbeafe 100%);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature-card .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h4 {
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+        .disclaimer {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .disclaimer h3 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer p {
+            color: #92400e;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* English content */
+        .en {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .contact-banner .email {
+                font-size: 18px;
+            }
+
+            .app-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="?lang=zh">中文</a>
+            <a href="?lang=en">English</a>
+        </div>
+
+        <!-- Chinese Content -->
+        <div class="zh">
+            <div class="header">
+                <div class="app-icon">
+                    <img src="images/mac_128@2x.min.png" alt="天干地支学习卡 Logo">
+                </div>
+                <h1>天干地支学习卡 技术支持</h1>
+                <div class="subtitle">TianganDizhi Cards Support</div>
+            </div>
+
+            <div class="contact-banner">
+                <div class="label">联系邮箱</div>
+                <div class="email">
+                    <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>
+                </div>
+            </div>
+
+            <h2>应用介绍</h2>
+            <p>天干地支学习卡是一款教育类应用，通过记忆卡片形式帮助你轻松掌握中国传统十天干、十二地支知识。</p>
+
+            <div class="feature-list">
+                <div class="feature-card">
+                    <div class="icon">📚</div>
+                    <h4>十天干</h4>
+                    <p>甲乙丙丁戊己庚辛壬癸</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧭</div>
+                    <h4>十二地支</h4>
+                    <p>子丑寅卯辰巳午未申酉戌亥</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h4>五行知识</h4>
+                    <p>木火土金水相生相克</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📝</div>
+                    <h4>学习测试</h4>
+                    <p>多种模式检验成果</p>
+                </div>
+            </div>
+
+            <h2>常见问题</h2>
+
+            <div class="faq-item">
+                <h3>如何开始学习？</h3>
+                <p>打开应用后，您可以从首页选择"天干学习"或"地支学习"开始。应用采用记忆卡片形式，建议按顺序逐步学习。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>天干地支是什么？</h3>
+                <p>天干地支是中国古代用于计时的符号系统。十天干为：甲、乙、丙、丁、戊、己、庚、辛、壬、癸。十二地支为：子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>应用是否需要联网？</h3>
+                <p>不需要。天干地支学习卡是一款纯本地应用，无需网络连接即可使用所有功能。所有学习内容都已内置在应用中。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>如何测试学习成果？</h3>
+                <p>应用提供多种测试模式：顺序测试、随机测试、配对测试和五行测试。您可以根据学习进度选择合适的测试方式。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>应用会保存我的学习进度吗？</h3>
+                <p>不会。应用是纯本地应用，不保存任何用户数据。每次打开应用都是全新的学习体验。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>适合什么年龄段使用？</h3>
+                <p>应用适合所有年龄段用户。内容简单易懂，非常适合中小学生、传统文化爱好者以及想要了解八字基础知识的用户。</p>
+            </div>
+
+            <div class="disclaimer">
+                <h3>学习提示</h3>
+                <p>本应用为教育类应用，旨在帮助用户学习中国传统文化知识。建议每天学习5-10张卡片，循序渐进效果更好。</p>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="en">
+            <div class="header">
+                <div class="app-icon">
+                    <img src="images/mac_128@2x.min.png" alt="TianganDizhi Cards Logo">
+                </div>
+                <h1>TianganDizhi Cards Support</h1>
+                <div class="subtitle">天干地支学习卡</div>
+            </div>
+
+            <div class="contact-banner">
+                <div class="label">Contact Email</div>
+                <div class="email">
+                    <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>
+                </div>
+            </div>
+
+            <h2>App Introduction</h2>
+            <p>TianganDizhi Cards is an educational app that helps you easily master the traditional Chinese Ten Tiangan and Twelve Dizhi through flashcards.</p>
+
+            <div class="feature-list">
+                <div class="feature-card">
+                    <div class="icon">📚</div>
+                    <h4>Ten Tiangan</h4>
+                    <p>Jia Yi Bing Ding Wu Ji Geng Xin Ren Gui</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🧭</div>
+                    <h4>Twelve Dizhi</h4>
+                    <p>Zi Chou Yin Mao Chen Si Wu Wei Shen You Xu Hai</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h4>Five Elements</h4>
+                    <p>Wood Fire Earth Metal Water</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📝</div>
+                    <h4>Learning Tests</h4>
+                    <p>Multiple modes to test progress</p>
+                </div>
+            </div>
+
+            <h2>FAQ</h2>
+
+            <div class="faq-item">
+                <h3>How to start learning?</h3>
+                <p>Open the app and choose "Tiangan Learning" or "Dizhi Learning" from the home page. The app uses flashcards, and we recommend learning step by step in order.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What are Tiangan and Dizhi?</h3>
+                <p>Tiangan and Dizhi are ancient Chinese symbols used for timekeeping. The Ten Tiangan are: Jia, Yi, Bing, Ding, Wu, Ji, Geng, Xin, Ren, Gui. The Twelve Dizhi are: Zi, Chou, Yin, Mao, Chen, Si, Wu, Wei, Shen, You, Xu, Hai.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does the app require internet?</h3>
+                <p>No. TianganDizhi Cards is a fully offline app. All features work without internet connection. All learning content is built into the app.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How to test learning progress?</h3>
+                <p>The app provides multiple test modes: sequential test, random test, matching test, and Five Elements test. You can choose the appropriate test based on your learning progress.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does the app save my learning progress?</h3>
+                <p>No. The app is a fully local app and does not save any user data. Every time you open the app, it's a fresh learning experience.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What age group is it suitable for?</h3>
+                <p>The app is suitable for all ages. The content is simple and easy to understand, perfect for students, traditional culture enthusiasts, and users who want to learn the basics of Bazi.</p>
+            </div>
+
+            <div class="disclaimer">
+                <h3>Learning Tips</h3>
+                <p>This is an educational app designed to help users learn traditional Chinese culture. We recommend learning 5-10 cards daily for the best results.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Govo Studio. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="privacy-policy.html">隐私政策</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Simple language switching
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang');
+
+        if (lang === 'en') {
+            document.querySelectorAll('.zh').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'block');
+        } else {
+            document.querySelectorAll('.zh').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+        }
+    </script>
+</body>
+</html>
