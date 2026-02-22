@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务条款 - Mood Map Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 100;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            background: #f0f0f0;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .content {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 32px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 32px 0 16px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin: 24px 0 12px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #f0f7ff;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .highlight-title {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 8px;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        .price-table th, .price-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .price-table th {
+            background: #f8f8f8;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <!-- 中文内容 -->
+            <div class="lang-content active" id="zh">
+                <h1>Mood Map Pro 服务条款</h1>
+
+                <p>欢迎使用 Mood Map Pro！请您仔细阅读以下服务条款。通过订阅或购买我们的付费服务，即表示您同意遵守本条款。</p>
+
+                <h2>一、订阅服务</h2>
+
+                <h3>1. 订阅类型</h3>
+                <table class="price-table">
+                    <tr>
+                        <th>订阅类型</th>
+                        <th>价格</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr>
+                        <td>月卡</td>
+                        <td>¥12.00/月</td>
+                        <td>按月续费</td>
+                    </tr>
+                    <tr>
+                        <td>年卡</td>
+                        <td>¥68.00/年</td>
+                        <td>按年续费，省约52%</td>
+                    </tr>
+                    <tr>
+                        <td>终身</td>
+                        <td>¥128.00</td>
+                        <td>一次购买，终身使用</td>
+                    </tr>
+                </table>
+
+                <h3>2. 自动续费</h3>
+                <p>除非您在当前订阅期结束前至少24小时关闭自动续订，否则订阅将自动续订。您可以在设备设置中管理或取消订阅。</p>
+
+                <h3>3. 免费试用</h3>
+                <p>如有免费试用，首次试用结束后，除非您在24小时内取消，否则将自动转为付费订阅。</p>
+
+                <h2>二、付款</h2>
+
+                <p>购买确认后，您的Apple ID账户将收取相应费用。所有费用以人民币计价，可能因地区而异。</p>
+
+                <div class="highlight">
+                    <div class="highlight-title">特别说明</div>
+                    <p>App内购买由Apple ID账户扣费。确认购买即表示您授权支付相应费用。订阅将自动续订，除非关闭自动续订功能。</p>
+                </div>
+
+                <h2>三、取消与退款</h2>
+
+                <h3>1. 取消订阅</h3>
+                <p>如需取消订阅，请按照以下步骤操作：</p>
+                <ol>
+                    <li>打开 iPhone/iPad 上的"设置"应用</li>
+                    <li>点击您的 Apple ID</li>
+                    <li>点击"订阅"</li>
+                    <li>选择"Mood Map Pro"</li>
+                    <li>点击"取消订阅"</li>
+                </ol>
+
+                <h3>2. 退款政策</h3>
+                <p>Apple App Store购买不支持直接退款申请。如需退款，请联系Apple客服：访问 <a href="https://reportaproblem.apple.com" style="color: #007AFF;">reportaproblem.apple.com</a> 或致电 400-670-1855。</p>
+
+                <h2>四、您的权利</h2>
+
+                <p>作为订阅用户，您有权享受以下服务：</p>
+                <ul>
+                    <li>无限情绪记录功能</li>
+                    <li>情绪趋势分析</li>
+                    <li>自定义提醒功能 <li>专属主题皮肤</li>
+                   </li>
+                    <li>所有Pro专属内容</li>
+                </ul>
+
+                <h2>五、服务变更</h2>
+
+                <p>我们保留随时修改服务价格的权利。订阅期间价格变更不会影响当前订阅期。续订时将应用新的价格。</p>
+
+                <h2>六、免责声明</h2>
+
+                <p>本服务按"原样"提供，不提供任何明示或暗示的保证。在法律允许的最大范围内，我们不对任何间接、偶发或后果性损害负责。</p>
+
+                <h2>七、隐私</h2>
+
+                <p>我们重视您的隐私。我们仅收集订阅相关的必要信息用于服务提供。详细隐私政策请参阅应用内隐私政策。</p>
+
+                <h2>八、联系我们</h2>
+
+                <p>如对本条款有任何疑问，请联系我们：support@moodmap.app</p>
+
+                <p style="margin-top: 32px; color: #666; font-size: 14px;">
+                    更新时间：2026年2月<br>
+                    版本：1.0
+                </p>
+            </div>
+
+            <!-- 英文内容 -->
+            <div class="lang-content" id="en">
+                <h1>Mood Map Pro Terms of Service</h1>
+
+                <p>Welcome to Mood Map Pro! Please read these terms of service carefully. By subscribing to or purchasing our paid services, you agree to comply with these terms.</p>
+
+                <h2>1. Subscription Services</h2>
+
+                <h3>1.1 Subscription Types</h3>
+                <table class="price-table">
+                    <tr>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Monthly</td>
+                        <td>$2.99/month</td>
+                        <td>Billed monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Yearly</td>
+                        <td>$19.99/year</td>
+                        <td>Billed annually, save 44%</td>
+                    </tr>
+                    <tr>
+                        <td>Lifetime</td>
+                        <td>$39.99</td>
+                        <td>One-time purchase, lifetime access</td>
+                    </tr>
+                </table>
+
+                <h3>1.2 Auto-Renewal</h3>
+                <p>Unless you cancel at least 24 hours before the end of the current subscription period, your subscription will automatically renew. You can manage or cancel subscriptions in your device settings.</p>
+
+                <h3>1.3 Free Trial</h3>
+                <p>If a free trial is offered, unless you cancel at least 24 hours before the trial ends, you will be automatically charged for the subscription.</p>
+
+                <h2>2. Payment</h2>
+
+                <p>Upon purchase confirmation, your Apple ID account will be charged. All fees are charged in your local currency via Apple.</p>
+
+                <div class="highlight">
+                    <div class="highlight-title">Important Notice</div>
+                    <p>In-app purchases are charged to your Apple ID account. By confirming your purchase, you authorize payment. Subscriptions automatically renew unless auto-renewal is turned off.</p>
+                </div>
+
+                <h2>3. Cancellation & Refunds</h2>
+
+                <h3>3.1 Cancel Subscription</h3>
+                <p>To cancel your subscription:</p>
+                <ol>
+                    <li>Open Settings on your iPhone/iPad</li>
+                    <li>Tap your Apple ID</li>
+                    <li>Tap Subscriptions</li>
+                    <li>Select Mood Map Pro</li>
+                    <li>Tap Cancel Subscription</li>
+                </ol>
+
+                <h3>3.2 Refund Policy</h3>
+                <p>Direct refund requests for App Store purchases are not available through us. To request a refund, please contact Apple Support at <a href="https://reportaproblem.apple.com" style="color: #007AFF;">reportaproblem.apple.com</a>.</p>
+
+                <h2>4. Your Rights</h2>
+
+                <p>As a subscriber, you are entitled to:</p>
+                <ul>
+                    <li>Unlimited mood records</li>
+                    <li>Mood trend analysis</li>
+                    <li>Custom reminders</li>
+                    <li>Exclusive themes</li>
+                    <li>All Pro-exclusive content</li>
+                </ul>
+
+                <h2>5. Changes to Service</h2>
+
+                <p>We reserve the right to modify service prices at any time. Price changes during a subscription period will not affect the current billing period. New prices will apply upon renewal.</p>
+
+                <h2>6. Disclaimer</h2>
+
+                <p>This service is provided "as is" without any warranties. To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, or consequential damages.</p>
+
+                <h2>7. Privacy</h2>
+
+                <p>We value your privacy. We only collect necessary information related to subscription for service delivery. Please refer to the in-app Privacy Policy for details.</p>
+
+                <h2>8. Contact Us</h2>
+
+                <p>If you have any questions about these terms, please contact us: support@moodmap.app</p>
+
+                <p style="margin-top: 32px; color: #666; font-size: 14px;">
+                    Last Updated: February 2026<br>
+                    Version: 1.0
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Mood Map. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            document.getElementById(lang).classList.add('active');
+            event.target.classList.add('active');
+
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+    </script>
+</body>
+</html>
