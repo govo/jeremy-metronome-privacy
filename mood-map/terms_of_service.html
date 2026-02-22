@@ -356,6 +356,18 @@
     </div>
 
     <script>
+        // 页面加载时根据URL参数设置语言
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const lang = params.get('lang');
+
+            if (lang === 'en') {
+                switchLang('en');
+            } else {
+                switchLang('zh');
+            }
+        })();
+
         function switchLang(lang) {
             document.querySelectorAll('.lang-content').forEach(el => {
                 el.classList.remove('active');
@@ -365,7 +377,16 @@
             });
 
             document.getElementById(lang).classList.add('active');
-            event.target.classList.add('active');
+
+            // 找到对应的按钮并设置active
+            const buttons = document.querySelectorAll('.lang-btn');
+            if (lang === 'zh') {
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+            } else {
+                buttons[0].classList.remove('active');
+                buttons[1].classList.add('active');
+            }
 
             document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         }
