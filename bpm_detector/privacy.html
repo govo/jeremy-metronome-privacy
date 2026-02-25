@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #0ea5e9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "SF Pro Text", "PingFang SC", "Hiragino Sans", sans-serif;
+      background: linear-gradient(180deg, #eef8ff 0%, var(--bg) 50%, var(--bg) 100%);
+      color: var(--text);
+      padding: 20px;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    h1 { margin: 0; font-size: 1.8rem; }
+    .lang a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .meta {
+      color: var(--muted);
+      margin: 8px 0 20px;
+      font-size: 0.95rem;
+    }
+    h2 { margin: 18px 0 10px; font-size: 1.15rem; }
+    p, li { line-height: 1.65; }
+    ul { margin: 8px 0 12px 18px; padding: 0; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <h1 id="title"></h1>
+      <div class="lang">
+        <a href="?lan=zh">中文</a>
+        <a href="?lan=en">EN</a>
+        <a href="?lan=ja">日本語</a>
+      </div>
+    </div>
+    <div class="meta" id="updated"></div>
+
+    <h2 id="s1t"></h2>
+    <p id="s1c"></p>
+
+    <h2 id="s2t"></h2>
+    <ul>
+      <li id="s2c1"></li>
+      <li id="s2c2"></li>
+      <li id="s2c3"></li>
+    </ul>
+
+    <h2 id="s3t"></h2>
+    <p id="s3c"></p>
+
+    <h2 id="s4t"></h2>
+    <p id="s4c"></p>
+
+    <h2 id="s5t"></h2>
+    <p id="s5c"></p>
+  </main>
+
+  <script>
+    const i18n = {
+      zh: {
+        title: "隐私政策",
+        updated: "最后更新：2026-02-25",
+        s1t: "1. 我们收集的信息",
+        s1c: "本应用仅在提供功能所必需的范围内处理数据。用于 BPM 分析的音频/视频与检测结果仅在你的设备本地处理与保存。",
+        s2t: "2. 可能处理的数据类型",
+        s2c1: "你主动导入的音频或视频文件（用于分析）。",
+        s2c2: "应用内产生的检测结果与历史记录（用于功能展示）。",
+        s2c3: "订阅状态相关信息（由 Apple 处理购买与账单）。",
+        s3t: "3. 数据使用目的",
+        s3c: "用于提供 BPM 检测、历史记录展示、订阅权益判断与基础故障排查，不用于出售个人数据。",
+        s4t: "4. 数据共享与存储",
+        s4c: "你的音频/视频、检测结果与历史记录仅保存在设备本地，不上传到我们的服务器。除法律要求外，我们不会向第三方共享你的个人数据。",
+        s5t: "5. 联系我们",
+        s5c: "如有隐私相关问题，请联系：govomusic@gmail.com"
+      },
+      en: {
+        title: "Privacy Policy",
+        updated: "Last updated: 2026-02-25",
+        s1t: "1. Information We Collect",
+        s1c: "The app only processes data required for core features. Audio/video used for BPM analysis and detection results are processed and stored locally on your device only.",
+        s2t: "2. Data Types We May Process",
+        s2c1: "Audio or video files you import for analysis.",
+        s2c2: "Detection results and history generated in the app.",
+        s2c3: "Subscription status information (purchases and billing are handled by Apple).",
+        s3t: "3. How We Use Data",
+        s3c: "To provide BPM detection, show history, validate subscription access, and perform basic troubleshooting. We do not sell personal data.",
+        s4t: "4. Sharing and Storage",
+        s4c: "Your audio/video, detection results, and history are stored on your device only and are not uploaded to our servers. We do not share your personal data with third parties unless required by law.",
+        s5t: "5. Contact",
+        s5c: "For privacy questions, contact: govomusic@gmail.com"
+      },
+      ja: {
+        title: "プライバシーポリシー",
+        updated: "最終更新日: 2026-02-25",
+        s1t: "1. 収集する情報",
+        s1c: "本アプリは機能提供に必要な範囲でのみデータを処理します。BPM解析に使用する音声/動画および検出結果は、ユーザー端末内でのみ処理・保存されます。",
+        s2t: "2. 処理される可能性のあるデータ",
+        s2c1: "解析のためにユーザーが読み込んだ音声/動画ファイル。",
+        s2c2: "アプリ内で生成される検出結果と履歴。",
+        s2c3: "サブスクリプション状態情報（購入・請求はAppleが処理）。",
+        s3t: "3. 利用目的",
+        s3c: "BPM検出、履歴表示、サブスクリプション権限判定、基本的な不具合対応のために利用し、個人データの販売は行いません。",
+        s4t: "4. 共有と保存",
+        s4c: "音声/動画、検出結果、履歴は端末内にのみ保存され、当社サーバーへアップロードされません。法令に基づく場合を除き、第三者への個人データ共有は行いません。",
+        s5t: "5. お問い合わせ",
+        s5c: "プライバシーに関するお問い合わせ: govomusic@gmail.com"
+      }
+    };
+
+    function resolveLan() {
+      const q = new URLSearchParams(window.location.search).get("lan");
+      if (q && i18n[q]) return q;
+      const n = navigator.language.toLowerCase();
+      if (n.startsWith("zh")) return "zh";
+      if (n.startsWith("ja")) return "ja";
+      return "en";
+    }
+
+    function render(lan) {
+      const t = i18n[lan];
+      document.documentElement.lang = lan === "zh" ? "zh-CN" : lan;
+      Object.keys(t).forEach((key) => {
+        const node = document.getElementById(key);
+        if (node) node.textContent = t[key];
+      });
+      document.title = t.title;
+    }
+
+    render(resolveLan());
+  </script>
+</body>
+</html>

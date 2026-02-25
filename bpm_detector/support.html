@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support</title>
+  <style>
+    :root {
+      --bg: #fffaf3;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #ea580c;
+      --accent-soft: #fff1e8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "SF Pro Text", "PingFang SC", "Hiragino Sans", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 90% 0%, #ffe7d4 0, transparent 28%), var(--bg);
+      padding: 20px;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    h1 { margin: 0; font-size: 1.8rem; }
+    .lang a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .mail {
+      margin: 16px 0 18px;
+      padding: 16px;
+      border-radius: 12px;
+      border: 2px solid var(--accent);
+      background: var(--accent-soft);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .mail a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    h2 { margin: 18px 0 10px; font-size: 1.15rem; }
+    p, li { line-height: 1.65; }
+    ul { margin: 8px 0 12px 18px; padding: 0; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <h1 id="title"></h1>
+      <div class="lang">
+        <a href="?lan=zh">中文</a>
+        <a href="?lan=en">EN</a>
+        <a href="?lan=ja">日本語</a>
+      </div>
+    </div>
+
+    <p id="desc"></p>
+
+    <div class="mail"><span id="mailPrefix"></span> <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a></div>
+
+    <h2 id="faqTitle"></h2>
+    <ul>
+      <li id="faq1"></li>
+      <li id="faq2"></li>
+      <li id="faq3"></li>
+    </ul>
+
+    <h2 id="replyTitle"></h2>
+    <p id="replyText"></p>
+  </main>
+
+  <script>
+    const i18n = {
+      zh: {
+        title: "支持页面",
+        desc: "如果你在使用中遇到问题、功能建议或订阅相关疑问，请通过以下邮箱联系我们。",
+        mailPrefix: "联系邮箱：",
+        faqTitle: "常见问题",
+        faq1: "检测不到 BPM：请使用节奏更明显、音质更清晰的音频片段。",
+        faq2: "导入失败：请确认文件格式受系统支持，并检查文件是否损坏。",
+        faq3: "订阅问题：请在 Apple ID 订阅设置中确认当前状态。",
+        replyTitle: "回复时间",
+        replyText: "通常会在 1-3 个工作日内回复。"
+      },
+      en: {
+        title: "Support",
+        desc: "If you run into issues, have feature requests, or need subscription help, contact us via email below.",
+        mailPrefix: "Contact Email:",
+        faqTitle: "FAQ",
+        faq1: "No BPM detected: try a clearer audio segment with stronger rhythm.",
+        faq2: "Import failed: verify the file format is supported and the file is not corrupted.",
+        faq3: "Subscription issues: check your current status in Apple ID subscription settings.",
+        replyTitle: "Response Time",
+        replyText: "We usually reply within 1-3 business days."
+      },
+      ja: {
+        title: "サポート",
+        desc: "不具合、機能要望、サブスクリプションに関するご質問は、以下のメールまでご連絡ください。",
+        mailPrefix: "連絡先メール：",
+        faqTitle: "よくある質問",
+        faq1: "BPMを検出できない場合：リズムが明確な音源をお試しください。",
+        faq2: "読み込み失敗：対応形式かどうか、ファイル破損がないかをご確認ください。",
+        faq3: "購読の問題：Apple ID のサブスクリプション設定で状態をご確認ください。",
+        replyTitle: "返信目安",
+        replyText: "通常 1-3 営業日以内に返信します。"
+      }
+    };
+
+    function resolveLan() {
+      const q = new URLSearchParams(window.location.search).get("lan");
+      if (q && i18n[q]) return q;
+      const n = navigator.language.toLowerCase();
+      if (n.startsWith("zh")) return "zh";
+      if (n.startsWith("ja")) return "ja";
+      return "en";
+    }
+
+    function render(lan) {
+      const t = i18n[lan];
+      document.documentElement.lang = lan === "zh" ? "zh-CN" : lan;
+      Object.keys(t).forEach((key) => {
+        const node = document.getElementById(key);
+        if (node) node.textContent = t[key];
+      });
+      document.title = t.title;
+    }
+
+    render(resolveLan());
+  </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In-App Purchase Terms</title>
+  <style>
+    :root {
+      --bg: #f7fdf8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #059669;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "SF Pro Text", "PingFang SC", "Hiragino Sans", sans-serif;
+      background: linear-gradient(180deg, #e9fff1 0%, var(--bg) 45%, var(--bg) 100%);
+      color: var(--text);
+      padding: 20px;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    h1 { margin: 0; font-size: 1.8rem; }
+    .lang a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .meta {
+      color: var(--muted);
+      margin: 8px 0 18px;
+      font-size: 0.95rem;
+    }
+    h2 { margin: 18px 0 10px; font-size: 1.1rem; }
+    p, li { line-height: 1.65; }
+    ul { margin: 8px 0 12px 18px; padding: 0; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <h1 id="title"></h1>
+      <div class="lang">
+        <a href="?lan=zh">中文</a>
+        <a href="?lan=en">EN</a>
+        <a href="?lan=ja">日本語</a>
+      </div>
+    </div>
+    <div class="meta" id="updated"></div>
+
+    <h2 id="s1t"></h2>
+    <p id="s1c"></p>
+
+    <h2 id="s2t"></h2>
+    <ul>
+      <li id="s2c1"></li>
+      <li id="s2c2"></li>
+      <li id="s2c3"></li>
+    </ul>
+
+    <h2 id="s3t"></h2>
+    <p id="s3c"></p>
+
+    <h2 id="s4t"></h2>
+    <p id="s4c"></p>
+
+    <h2 id="s5t"></h2>
+    <p id="s5c"></p>
+
+    <h2 id="s6t"></h2>
+    <p id="s6c"></p>
+
+    <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" id="eula"></a></p>
+  </main>
+
+  <script>
+    const i18n = {
+      zh: {
+        title: "内购服务协议",
+        updated: "最后更新：2026-02-25",
+        s1t: "1. 服务内容",
+        s1c: "应用提供可选订阅或一次性内购，用于解锁高级功能。具体权益以应用内展示为准。",
+        s2t: "2. 订阅与自动续费",
+        s2c1: "订阅会在当前周期结束前 24 小时内自动续费（除非提前取消）。",
+        s2c2: "续费费用将从你的 Apple ID 账户扣除。",
+        s2c3: "你可在 Apple ID 订阅设置中管理或取消自动续费。",
+        s3t: "3. 免费试用与退款",
+        s3c: "如提供免费试用，试用结束后将按所选计划自动转为付费。退款规则以 Apple 官方政策为准。",
+        s4t: "4. 价格与变更",
+        s4c: "价格以购买时 App Store 显示为准。我们可能根据运营需要调整未来价格或套餐。",
+        s5t: "5. 终止与违规",
+        s5c: "若发现滥用、欺诈或违反相关条款，我们有权在法律允许范围内限制服务。",
+        s6t: "6. 联系方式",
+        s6c: "内购相关问题请联系：govomusic@gmail.com",
+        eula: "Apple 标准最终用户许可协议（EULA）"
+      },
+      en: {
+        title: "In-App Purchase Terms",
+        updated: "Last updated: 2026-02-25",
+        s1t: "1. Service Scope",
+        s1c: "The app offers optional subscriptions or one-time purchases to unlock premium features. Benefits are shown in-app.",
+        s2t: "2. Subscriptions and Auto-Renewal",
+        s2c1: "Subscriptions renew automatically within 24 hours before the current period ends unless canceled.",
+        s2c2: "Renewal charges are billed to your Apple ID account.",
+        s2c3: "You can manage or cancel subscriptions in Apple ID settings.",
+        s3t: "3. Free Trials and Refunds",
+        s3c: "If a free trial is provided, it converts to a paid plan after the trial period unless canceled. Refunds follow Apple's policies.",
+        s4t: "4. Pricing and Changes",
+        s4c: "Pricing is based on what is displayed in the App Store at purchase time. Future pricing or plans may change.",
+        s5t: "5. Termination and Misuse",
+        s5c: "We may limit access where misuse, fraud, or violations are identified, as permitted by applicable law.",
+        s6t: "6. Contact",
+        s6c: "For in-app purchase questions: govomusic@gmail.com",
+        eula: "Apple Standard End User License Agreement (EULA)"
+      },
+      ja: {
+        title: "アプリ内課金サービス利用規約",
+        updated: "最終更新日: 2026-02-25",
+        s1t: "1. サービス内容",
+        s1c: "本アプリでは、プレミアム機能を利用するためのサブスクリプションまたは買い切り課金を提供します。詳細はアプリ内表示に従います。",
+        s2t: "2. サブスクリプションと自動更新",
+        s2c1: "サブスクリプションは、期間終了前24時間以内に自動更新されます（事前に解約しない場合）。",
+        s2c2: "更新料金は Apple ID アカウントに請求されます。",
+        s2c3: "Apple ID の設定から管理・解約できます。",
+        s3t: "3. 無料トライアルと返金",
+        s3c: "無料トライアルがある場合、期間終了後は選択プランで自動課金されます。返金は Apple の規定に従います。",
+        s4t: "4. 価格と変更",
+        s4c: "価格は購入時の App Store 表示に準拠します。今後の価格やプランは変更される場合があります。",
+        s5t: "5. 利用停止と違反",
+        s5c: "不正利用・詐欺・規約違反が確認された場合、法令の範囲内でサービス利用を制限することがあります。",
+        s6t: "6. お問い合わせ",
+        s6c: "アプリ内課金に関するお問い合わせ：govomusic@gmail.com",
+        eula: "Apple標準エンドユーザー使用許諾契約（EULA）"
+      }
+    };
+
+    function resolveLan() {
+      const q = new URLSearchParams(window.location.search).get("lan");
+      if (q && i18n[q]) return q;
+      const n = navigator.language.toLowerCase();
+      if (n.startsWith("zh")) return "zh";
+      if (n.startsWith("ja")) return "ja";
+      return "en";
+    }
+
+    function render(lan) {
+      const t = i18n[lan];
+      document.documentElement.lang = lan === "zh" ? "zh-CN" : lan;
+      Object.keys(t).forEach((key) => {
+        const node = document.getElementById(key);
+        if (node) node.textContent = t[key];
+      });
+      document.title = t.title;
+    }
+
+    render(resolveLan());
+  </script>
+</body>
+</html>
