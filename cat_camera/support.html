@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支持 - 猫咪相机 CatMeows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F8F9FA;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .lang-link {
+            font-size: 12px;
+            color: #666;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: #f0f1f3;
+        }
+
+        .lang-link.active {
+            color: white;
+            background: #FF6B6B;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(180deg, #FF6B6B, #FF8E8E);
+            border-radius: 2px;
+        }
+
+        .section-content {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.65;
+            padding-left: 12px;
+        }
+
+        .section-content p + p {
+            margin-top: 10px;
+        }
+
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-content li + li {
+            margin-top: 8px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            border-radius: 20px;
+            padding: 26px;
+            text-align: center;
+            margin: 28px 0;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .contact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .contact-email {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 28px 20px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            .contact-email {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="lang-switch">
+                <a id="switch-zh" class="lang-link" href="?lan=zh">中文</a>
+                <a id="switch-en" class="lang-link" href="?lan=en">EN</a>
+            </div>
+
+            <div class="logo">
+                <img src="icon.min.png" alt="CatMeows" class="logo-icon">
+                <div id="logo-text" class="logo-text">猫咪相机</div>
+            </div>
+
+            <p id="subtitle" class="subtitle">CatMeows - 拍猫更容易</p>
+
+            <div class="section">
+                <div id="faq-title" class="section-title">常见问题</div>
+                <div id="faq-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="howto-title" class="section-title">如何使用</div>
+                <div id="howto-content" class="section-content"></div>
+            </div>
+
+            <div class="contact-box">
+                <div class="contact-icon">📧</div>
+                <div id="contact-title" class="contact-title">联系我们</div>
+                <a href="mailto:govomusic@gmail.com" class="contact-email">govomusic@gmail.com</a>
+            </div>
+
+            <div class="footer">© 2026 CatMeows. All rights reserved.</div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var copy = {
+                zh: {
+                    htmlLang: 'zh-CN',
+                    pageTitle: '支持 - 猫咪相机 CatMeows',
+                    logo: '猫咪相机',
+                    subtitle: 'CatMeows - 拍猫更容易',
+                    faqTitle: '常见问题',
+                    faqHtml:
+                        '<p><strong>Q: 为什么猫咪拍照时总是不看镜头？</strong><br>A: 这是常见问题。建议先在声音页选择更适合你家猫咪的吸引声，再回到相机连拍，更容易抓到对视瞬间。</p>' +
+                        '<p><strong>Q: 猫咪对播放的声音反应不明显怎么办？</strong><br>A: 每只猫反应不同。建议在猫咪放松时尝试不同声音，并使用较低音量，避免持续播放。</p>',
+                    howToTitle: '如何使用',
+                    howToHtml:
+                        '<ul>' +
+                        '<li>• <strong>声音</strong>：先试听并选择吸引声，引导猫咪看向镜头</li>' +
+                        '<li>• <strong>拍照</strong>：拍摄时播放声音，提高抓拍到眼神的概率</li>' +
+                        '<li>• <strong>滤镜</strong>：在拍照结果页一键套用滤镜，快速得到更出片的照片</li>' +
+                        '</ul>',
+                    contactTitle: '联系我们'
+                },
+                en: {
+                    htmlLang: 'en',
+                    pageTitle: 'Support - Cat Camera CatMeows',
+                    logo: 'CatMeows',
+                    subtitle: 'CatMeows - Capture better cat photos',
+                    faqTitle: 'FAQ',
+                    faqHtml:
+                        '<p><strong>Q: Why does my cat look away right when I tap shutter?</strong><br>A: This is common. Pick an attract sound first, then shoot while the sound is playing to improve eye-contact shots.</p>' +
+                        '<p><strong>Q: What if my cat barely reacts to the played sounds?</strong><br>A: Cats react differently. Try different sounds at low volume when your cat is relaxed.</p>',
+                    howToTitle: 'How to Use',
+                    howToHtml:
+                        '<ul>' +
+                        '<li>• <strong>Sounds</strong>: Preview and choose an attract sound</li>' +
+                        '<li>• <strong>Camera</strong>: Play sound while shooting to catch eye-contact moments</li>' +
+                        '<li>• <strong>Filters</strong>: Apply one-tap filters on result photos for better output</li>' +
+                        '</ul>',
+                    contactTitle: 'Contact Us'
+                }
+            };
+
+            var params = new URLSearchParams(window.location.search);
+            var lan = params.get('lan') === 'en' ? 'en' : 'zh';
+            var t = copy[lan];
+
+            document.documentElement.lang = t.htmlLang;
+            document.title = t.pageTitle;
+            document.getElementById('logo-text').textContent = t.logo;
+            document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('faq-title').textContent = t.faqTitle;
+            document.getElementById('faq-content').innerHTML = t.faqHtml;
+            document.getElementById('howto-title').textContent = t.howToTitle;
+            document.getElementById('howto-content').innerHTML = t.howToHtml;
+            document.getElementById('contact-title').textContent = t.contactTitle;
+
+            document.getElementById('switch-zh').classList.toggle('active', lan === 'zh');
+            document.getElementById('switch-en').classList.toggle('active', lan === 'en');
+        })();
+    </script>
+</body>
+</html>

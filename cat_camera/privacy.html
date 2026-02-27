@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - 猫咪相机 CatMeows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F8F9FA;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .lang-link {
+            font-size: 12px;
+            color: #666;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: #f0f1f3;
+        }
+
+        .lang-link.active {
+            color: white;
+            background: #FF6B6B;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 24px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(180deg, #FF6B6B, #FF8E8E);
+            border-radius: 2px;
+        }
+
+        .section-content {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.65;
+            padding-left: 12px;
+        }
+
+        .section-content p + p {
+            margin-top: 8px;
+        }
+
+        .section-content ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .section-content li + li {
+            margin-top: 6px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            border-radius: 20px;
+            padding: 26px;
+            text-align: center;
+            margin: 28px 0;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .contact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .contact-email {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 28px 20px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .contact-email {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="lang-switch">
+                <a id="switch-zh" class="lang-link" href="?lan=zh">中文</a>
+                <a id="switch-en" class="lang-link" href="?lan=en">EN</a>
+            </div>
+
+            <div class="logo">
+                <img src="icon.min.png" alt="CatMeows" class="logo-icon">
+                <div id="logo-text" class="logo-text">猫咪相机</div>
+            </div>
+
+            <h1 id="page-title" class="title">隐私政策</h1>
+
+            <div class="section">
+                <div id="collect-title" class="section-title">数据收集</div>
+                <div id="collect-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="permission-title" class="section-title">设备权限</div>
+                <div id="permission-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="third-title" class="section-title">第三方服务</div>
+                <div id="third-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="security-title" class="section-title">数据安全</div>
+                <div id="security-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="children-title" class="section-title">儿童隐私</div>
+                <div id="children-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="update-title" class="section-title">政策更新</div>
+                <div id="update-content" class="section-content"></div>
+            </div>
+
+            <div class="contact-box">
+                <div class="contact-icon">📧</div>
+                <div id="contact-title" class="contact-title">隐私相关问题</div>
+                <a href="mailto:govomusic@gmail.com" class="contact-email">govomusic@gmail.com</a>
+            </div>
+
+            <div id="footer" class="footer">最后更新日期：2026年2月27日<br>© 2026 CatMeows. All rights reserved.</div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var copy = {
+                zh: {
+                    htmlLang: 'zh-CN',
+                    docTitle: '隐私政策 - 猫咪相机 CatMeows',
+                    logo: '猫咪相机',
+                    pageTitle: '隐私政策',
+                    collectTitle: '数据收集',
+                    collectHtml:
+                        '<p><strong>猫咪相机 CatMeows 不收集任何用户个人信息。</strong></p>' +
+                        '<p>本应用核心拍照、声音播放和滤镜功能均在本地运行，您的照片与相关数据不会被上传或存储在我们的服务器上。</p>',
+                    permissionTitle: '设备权限',
+                    permissionHtml:
+                        '<p>本应用需要以下设备权限：</p>' +
+                        '<ul>' +
+                        '<li><strong>相机</strong>：用于拍摄猫咪照片</li>' +
+                        '<li><strong>相册</strong>：用于保存猫咪照片到您的设备</li>' +
+                        '</ul>' +
+                        '<p>所有权限仅在您主动使用时才会请求，您可随时在系统设置中关闭权限。</p>',
+                    thirdTitle: '第三方服务',
+                    thirdHtml:
+                        '<p>本应用不使用第三方广告或分析服务。</p>' +
+                        '<p>我们不会与第三方共享您的照片或个人信息。</p>',
+                    securityTitle: '数据安全',
+                    securityHtml:
+                        '<p>由于不采集用户个人数据，不存在服务器侧数据泄露风险。</p>' +
+                        '<p>您的照片保存在本地设备，由您自行管理。</p>',
+                    childrenTitle: '儿童隐私',
+                    childrenHtml:
+                        '<p>本应用适合所有年龄用户在监护指导下使用。</p>' +
+                        '<p>我们不收集儿童个人信息。</p>',
+                    updateTitle: '政策更新',
+                    updateHtml:
+                        '<p>我们可能根据产品调整更新本隐私政策。</p>' +
+                        '<p>若有重要变更，会在应用或页面中更新说明。</p>',
+                    contactTitle: '隐私相关问题',
+                    footer: '最后更新日期：2026年2月27日<br>© 2026 CatMeows. All rights reserved.'
+                },
+                en: {
+                    htmlLang: 'en',
+                    docTitle: 'Privacy Policy - Cat Camera CatMeows',
+                    logo: 'CatMeows',
+                    pageTitle: 'Privacy Policy',
+                    collectTitle: 'Data Collection',
+                    collectHtml:
+                        '<p><strong>Cat Camera - CatMeows does not collect personal user data.</strong></p>' +
+                        '<p>Core camera, sound playback, and filter features run locally. Your photos and related data are not uploaded to our servers.</p>',
+                    permissionTitle: 'Device Permissions',
+                    permissionHtml:
+                        '<p>This app uses the following permissions:</p>' +
+                        '<ul>' +
+                        '<li><strong>Camera</strong>: To take cat photos</li>' +
+                        '<li><strong>Photo Library</strong>: To save photos to your device</li>' +
+                        '</ul>' +
+                        '<p>Permissions are requested only when you use related features and can be revoked anytime in system settings.</p>',
+                    thirdTitle: 'Third-Party Services',
+                    thirdHtml:
+                        '<p>This app does not use third-party advertising or analytics services.</p>' +
+                        '<p>We do not share your photos or personal information with third parties.</p>',
+                    securityTitle: 'Data Security',
+                    securityHtml:
+                        '<p>Because we do not collect personal data, there is no server-side personal data breach risk.</p>' +
+                        '<p>Your photos stay on your local device under your control.</p>',
+                    childrenTitle: "Children's Privacy",
+                    childrenHtml:
+                        '<p>This app is suitable for all ages under guardian guidance.</p>' +
+                        '<p>We do not collect children\'s personal information.</p>',
+                    updateTitle: 'Policy Updates',
+                    updateHtml:
+                        '<p>We may update this policy as the product evolves.</p>' +
+                        '<p>Any major changes will be reflected in the app or on this page.</p>',
+                    contactTitle: 'Privacy Questions',
+                    footer: 'Last Updated: February 27, 2026<br>© 2026 CatMeows. All rights reserved.'
+                }
+            };
+
+            var params = new URLSearchParams(window.location.search);
+            var lan = params.get('lan') === 'en' ? 'en' : 'zh';
+            var t = copy[lan];
+
+            document.documentElement.lang = t.htmlLang;
+            document.title = t.docTitle;
+            document.getElementById('logo-text').textContent = t.logo;
+            document.getElementById('page-title').textContent = t.pageTitle;
+
+            document.getElementById('collect-title').textContent = t.collectTitle;
+            document.getElementById('collect-content').innerHTML = t.collectHtml;
+
+            document.getElementById('permission-title').textContent = t.permissionTitle;
+            document.getElementById('permission-content').innerHTML = t.permissionHtml;
+
+            document.getElementById('third-title').textContent = t.thirdTitle;
+            document.getElementById('third-content').innerHTML = t.thirdHtml;
+
+            document.getElementById('security-title').textContent = t.securityTitle;
+            document.getElementById('security-content').innerHTML = t.securityHtml;
+
+            document.getElementById('children-title').textContent = t.childrenTitle;
+            document.getElementById('children-content').innerHTML = t.childrenHtml;
+
+            document.getElementById('update-title').textContent = t.updateTitle;
+            document.getElementById('update-content').innerHTML = t.updateHtml;
+
+            document.getElementById('contact-title').textContent = t.contactTitle;
+            document.getElementById('footer').innerHTML = t.footer;
+
+            document.getElementById('switch-zh').classList.toggle('active', lan === 'zh');
+            document.getElementById('switch-en').classList.toggle('active', lan === 'en');
+        })();
+    </script>
+</body>
+</html>
