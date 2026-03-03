@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务条款 - 猫咪相机 CatMeows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F8F9FA;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .lang-link {
+            font-size: 12px;
+            color: #666;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: #f0f1f3;
+        }
+
+        .lang-link.active {
+            color: white;
+            background: #FF6B6B;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 24px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(180deg, #FF6B6B, #FF8E8E);
+            border-radius: 2px;
+        }
+
+        .section-content {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.65;
+            padding-left: 12px;
+        }
+
+        .section-content p + p {
+            margin-top: 8px;
+        }
+
+        .section-content ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .section-content li + li {
+            margin-top: 6px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            border-radius: 20px;
+            padding: 26px;
+            text-align: center;
+            margin: 28px 0;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .contact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .contact-email {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .footer a {
+            color: #666;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 28px 20px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .contact-email {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="lang-switch">
+                <a id="switch-zh" class="lang-link" href="?lan=zh">中文</a>
+                <a id="switch-en" class="lang-link" href="?lan=en">EN</a>
+            </div>
+
+            <div class="logo">
+                <img src="icon.min.png" alt="CatMeows" class="logo-icon">
+                <div id="logo-text" class="logo-text">猫咪相机</div>
+            </div>
+
+            <h1 id="page-title" class="title">服务条款（内购）</h1>
+
+            <div class="section">
+                <div id="intro-title" class="section-title">条款说明</div>
+                <div id="intro-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="product-title" class="section-title">内购项目</div>
+                <div id="product-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="billing-title" class="section-title">订阅与计费规则</div>
+                <div id="billing-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="restore-title" class="section-title">管理与恢复购买</div>
+                <div id="restore-content" class="section-content"></div>
+            </div>
+
+            <div class="section">
+                <div id="legal-title" class="section-title">法律与协议</div>
+                <div id="legal-content" class="section-content"></div>
+            </div>
+
+            <div class="contact-box">
+                <div class="contact-icon">📧</div>
+                <div id="contact-title" class="contact-title">内购与订阅问题</div>
+                <a href="mailto:govomusic@gmail.com" class="contact-email">govomusic@gmail.com</a>
+            </div>
+
+            <div id="footer" class="footer">最后更新日期：2026年3月3日<br>© 2026 CatMeows. All rights reserved.</div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var copy = {
+                zh: {
+                    htmlLang: 'zh-CN',
+                    docTitle: '服务条款（内购）- 猫咪相机 CatMeows',
+                    logo: '猫咪相机',
+                    pageTitle: '服务条款（内购）',
+                    introTitle: '条款说明',
+                    introHtml:
+                        '<p>欢迎使用猫咪相机 CatMeows。本条款适用于本应用通过 Apple App Store 提供的内购与订阅服务。</p>' +
+                        '<p>当您购买任何内购项目时，即表示您同意受本条款、Apple 媒体服务条款以及 Apple 标准最终用户许可协议（EULA）约束。</p>',
+                    productTitle: '内购项目',
+                    productHtml:
+                        '<p>当前提供以下项目：</p>' +
+                        '<ul>' +
+                        '<li><strong>月度订阅（monthly）</strong></li>' +
+                        '<li><strong>年度订阅（yearly）</strong></li>' +
+                        '<li><strong>终身解锁（lifetime）</strong></li>' +
+                        '</ul>' +
+                        '<p>具体价格以您所在地区 App Store 实际显示为准。</p>',
+                    billingTitle: '订阅与计费规则',
+                    billingHtml:
+                        '<ul>' +
+                        '<li>订阅费用将通过您的 Apple ID 账户扣费。</li>' +
+                        '<li>自动续订订阅会在当前订阅周期结束前 24 小时内自动续费，除非您提前关闭自动续订。</li>' +
+                        '<li>您可在 Apple ID 的订阅管理中随时取消自动续订；取消后将在当前周期结束时生效。</li>' +
+                        '<li>终身解锁为一次性购买，不会自动续费。</li>' +
+                        '<li>如后续提供试用或优惠，具体规则以 App Store 页面展示及 Apple 结算规则为准。</li>' +
+                        '</ul>',
+                    restoreTitle: '管理与恢复购买',
+                    restoreHtml:
+                        '<ul>' +
+                        '<li>您可在应用内使用“恢复购买”以恢复已购买权益（同一 Apple ID）。</li>' +
+                        '<li>购买、退款和账单问题由 Apple 负责处理，请通过 Apple 官方渠道申请。</li>' +
+                        '<li>若恢复后权益未生效，请通过下方邮箱联系我们。</li>' +
+                        '</ul>',
+                    legalTitle: '法律与协议',
+                    legalHtml:
+                        '<p>Apple 标准最终用户许可协议（EULA）：<br><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>' +
+                        '<p>隐私政策：<br><a href="privacy.html?lan=zh">privacy.html?lan=zh</a></p>' +
+                        '<p>支持页面：<br><a href="support.html?lan=zh">support.html?lan=zh</a></p>',
+                    contactTitle: '内购与订阅问题',
+                    footer: '最后更新日期：2026年3月3日<br>© 2026 CatMeows. All rights reserved.'
+                },
+                en: {
+                    htmlLang: 'en',
+                    docTitle: 'Terms of Service (In-App Purchases) - Cat Camera CatMeows',
+                    logo: 'CatMeows',
+                    pageTitle: 'Terms of Service (In-App Purchases)',
+                    introTitle: 'Overview',
+                    introHtml:
+                        '<p>Welcome to Cat Camera - CatMeows. These terms apply to in-app purchases and subscriptions provided through the Apple App Store.</p>' +
+                        '<p>By purchasing any in-app product, you agree to these terms, Apple Media Services Terms, and Apple\'s Standard End User License Agreement (EULA).</p>',
+                    productTitle: 'Products',
+                    productHtml:
+                        '<p>Current products include:</p>' +
+                        '<ul>' +
+                        '<li><strong>Monthly Subscription (monthly)</strong></li>' +
+                        '<li><strong>Yearly Subscription (yearly)</strong></li>' +
+                        '<li><strong>Lifetime Unlock (lifetime)</strong></li>' +
+                        '</ul>' +
+                        '<p>Prices may vary by region and are shown in your local App Store.</p>',
+                    billingTitle: 'Subscription and Billing Rules',
+                    billingHtml:
+                        '<ul>' +
+                        '<li>Payment is charged to your Apple ID account at confirmation of purchase.</li>' +
+                        '<li>Auto-renewable subscriptions renew automatically unless auto-renew is turned off at least 24 hours before the end of the current period.</li>' +
+                        '<li>You can manage or cancel subscriptions in Apple ID subscription settings. Cancellation takes effect at the end of the current period.</li>' +
+                        '<li>Lifetime unlock is a one-time purchase and does not auto-renew.</li>' +
+                        '<li>If trials or promotions are offered in the future, terms shown on the App Store and Apple billing rules apply.</li>' +
+                        '</ul>',
+                    restoreTitle: 'Manage and Restore',
+                    restoreHtml:
+                        '<ul>' +
+                        '<li>You can use Restore Purchases in the app to recover entitlements under the same Apple ID.</li>' +
+                        '<li>Apple handles billing, refunds, and payment disputes through official Apple channels.</li>' +
+                        '<li>If your entitlement does not update after restore, contact us via the email below.</li>' +
+                        '</ul>',
+                    legalTitle: 'Legal and Policies',
+                    legalHtml:
+                        '<p>Apple Standard EULA:<br><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>' +
+                        '<p>Privacy Policy:<br><a href="privacy.html?lan=en">privacy.html?lan=en</a></p>' +
+                        '<p>Support Page:<br><a href="support.html?lan=en">support.html?lan=en</a></p>',
+                    contactTitle: 'IAP & Subscription Support',
+                    footer: 'Last Updated: March 3, 2026<br>© 2026 CatMeows. All rights reserved.'
+                }
+            };
+
+            var params = new URLSearchParams(window.location.search);
+            var lan = params.get('lan') === 'en' ? 'en' : 'zh';
+            var t = copy[lan];
+
+            document.documentElement.lang = t.htmlLang;
+            document.title = t.docTitle;
+            document.getElementById('logo-text').textContent = t.logo;
+            document.getElementById('page-title').textContent = t.pageTitle;
+
+            document.getElementById('intro-title').textContent = t.introTitle;
+            document.getElementById('intro-content').innerHTML = t.introHtml;
+
+            document.getElementById('product-title').textContent = t.productTitle;
+            document.getElementById('product-content').innerHTML = t.productHtml;
+
+            document.getElementById('billing-title').textContent = t.billingTitle;
+            document.getElementById('billing-content').innerHTML = t.billingHtml;
+
+            document.getElementById('restore-title').textContent = t.restoreTitle;
+            document.getElementById('restore-content').innerHTML = t.restoreHtml;
+
+            document.getElementById('legal-title').textContent = t.legalTitle;
+            document.getElementById('legal-content').innerHTML = t.legalHtml;
+
+            document.getElementById('contact-title').textContent = t.contactTitle;
+            document.getElementById('footer').innerHTML = t.footer;
+
+            document.getElementById('switch-zh').classList.toggle('active', lan === 'zh');
+            document.getElementById('switch-en').classList.toggle('active', lan === 'en');
+        })();
+    </script>
+</body>
+</html>
