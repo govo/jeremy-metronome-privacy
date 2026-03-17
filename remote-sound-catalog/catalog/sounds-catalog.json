@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-18T00:00:00Z",
+  "tracks": [
+    { "id": "fire_burn", "displayName": "Fire Burn", "path": "tracks/fire_burn.mp3" },
+    { "id": "frog", "displayName": "Frog", "path": "tracks/frog.mp3" },
+    { "id": "cricket", "displayName": "Cricket", "path": "tracks/cricket.mp3" },
+    { "id": "universe", "displayName": "Universe", "path": "tracks/universe.mp3" },
+    { "id": "brainwaves", "displayName": "Brain Waves", "path": "tracks/brainwaves.mp3" },
+    { "id": "homework", "displayName": "Homework", "path": "tracks/homework.mp3" },
+    { "id": "saturn", "displayName": "Saturn", "path": "tracks/saturn.mp3" },
+    { "id": "summer_piano", "displayName": "Summer Piano", "path": "tracks/summer_piano.mp3" },
+    { "id": "simple_happiness", "displayName": "Simple Happiness", "path": "tracks/simple_happiness.mp3" },
+    { "id": "love_song", "displayName": "Love Song", "path": "tracks/love_song.mp3" },
+    { "id": "tranquility", "displayName": "Tranquility", "path": "tracks/tranquility.mp3" },
+    { "id": "stroll", "displayName": "Stroll", "path": "tracks/stroll.mp3" },
+    { "id": "mars", "displayName": "Mars", "path": "tracks/mars.mp3" },
+    { "id": "source_of_energy", "displayName": "Source of Energy", "path": "tracks/source_of_energy.mp3" },
+    { "id": "chakra", "displayName": "Chakra", "path": "tracks/chakra.mp3" },
+    { "id": "confident_universe", "displayName": "Confident Universe", "path": "tracks/confident_universe.mp3" },
+    { "id": "firefly_light", "displayName": "Firefly Light", "path": "tracks/firefly_light.mp3" },
+    { "id": "memory_palace", "displayName": "Memory Palace", "path": "tracks/memory_palace.mp3" },
+    { "id": "memory_touch", "displayName": "Memory Touch", "path": "tracks/memory_touch.mp3" }
+  ]
+}
