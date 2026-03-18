@@ -1,145 +1,373 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PomodoroClock Terms of Sale</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f6f3ee;
-      color: #161311;
-      line-height: 1.65;
-    }
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 48px 20px 72px;
-    }
-    h1, h2 {
-      line-height: 1.2;
-      margin-top: 0;
-    }
-    h2 {
-      margin-top: 32px;
-    }
-    .meta {
-      color: #6d6259;
-      font-size: 14px;
-    }
-    .lang-switcher {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 0 0 28px;
-      font-size: 14px;
-    }
-    .lang-switcher a {
-      color: #8d4315;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务条款 - 番茄钟 PomodoroClock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .lang-link {
+            font-size: 12px;
+            color: #888;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-link.active {
+            color: white;
+            background: #ff9a52;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ff9a52, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: #f4efe7;
+            margin-bottom: 24px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f4efe7;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 16px;
+            background: linear-gradient(180deg, #ff9a52, #ffb347);
+            border-radius: 2px;
+        }
+
+        .section-content {
+            color: #a89f94;
+            font-size: 14px;
+            line-height: 1.65;
+            padding-left: 12px;
+        }
+
+        .section-content p + p {
+            margin-top: 8px;
+        }
+
+        .section-content ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .section-content li + li {
+            margin-top: 6px;
+        }
+
+        .section-content a {
+            color: #ff9a52;
+            text-decoration: none;
+        }
+
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #ff9a52, #ffb347);
+            border-radius: 20px;
+            padding: 26px;
+            text-align: center;
+            margin: 28px 0;
+            box-shadow: 0 10px 30px rgba(255, 154, 82, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .contact-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .contact-email {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .footer a {
+            color: #888;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 28px 20px;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .contact-email {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <nav class="lang-switcher" id="lang-switcher"></nav>
-    <h1 id="page-title"></h1>
-    <p class="meta" id="last-updated"></p>
+    <div class="container">
+        <div class="card">
+            <div class="lang-switch">
+                <a id="switch-zh" class="lang-link" href="?lan=zh">中文</a>
+                <a id="switch-en" class="lang-link" href="?lan=en">EN</a>
+            </div>
 
-    <h2 id="overview-title"></h2>
-    <p id="overview-body"></p>
+            <div class="logo">
+                <div id="logo-text" class="logo-text">番茄钟</div>
+            </div>
 
-    <h2 id="purchase-title"></h2>
-    <p id="purchase-body"></p>
+            <h1 id="page-title" class="title">服务条款（内购）</h1>
 
-    <h2 id="payment-title"></h2>
-    <p id="payment-body"></p>
+            <div class="section">
+                <div id="intro-title" class="section-title">条款说明</div>
+                <div id="intro-content" class="section-content"></div>
+            </div>
 
-    <h2 id="refund-title"></h2>
-    <p id="refund-body"></p>
+            <div class="section">
+                <div id="product-title" class="section-title">内购项目</div>
+                <div id="product-content" class="section-content"></div>
+            </div>
 
-    <h2 id="subscription-title"></h2>
-    <p id="subscription-body"></p>
+            <div class="section">
+                <div id="billing-title" class="section-title">订阅与计费规则</div>
+                <div id="billing-content" class="section-content"></div>
+            </div>
 
-    <h2 id="changes-title"></h2>
-    <p id="changes-body"></p>
+            <div class="section">
+                <div id="restore-title" class="section-title">管理与恢复购买</div>
+                <div id="restore-content" class="section-content"></div>
+            </div>
 
-    <h2 id="contact-title"></h2>
-    <p id="contact-body"></p>
-  </main>
-  <script>
-    const translations = {
-      en: {
-        pageTitle: "PomodoroClock Terms of Sale",
-        lastUpdated: "Last updated: 2026-03-18",
-        overviewTitle: "Overview",
-        overviewBody: "These Terms of Sale govern the purchase and use of any paid features, subscriptions, or virtual goods within the PomodoroClock app. By making a purchase, you agree to these terms.",
-        purchaseTitle: "Purchases",
-        purchaseBody: "PomodoroClock offers optional in-app purchases including premium themes, additional sound packs, and subscription plans. All purchases are final and non-refundable unless required by law. Prices are displayed in your local currency and include applicable taxes where required.",
-        paymentTitle: "Payment",
-        paymentBody: "Payments are processed securely through Apple's App Store. Your payment information is handled by Apple, not by PomodoroClock. By completing a purchase, you agree to Apple's Terms and Conditions for App Store purchases.",
-        refundTitle: "Refunds",
-        refundBody: "All purchases are final. Refunds are not available after a purchase is completed, except as required by applicable consumer protection laws. To request a refund, please contact Apple directly through their support channels.",
-        subscriptionTitle: "Subscriptions",
-        subscriptionBody: "If you subscribe to premium features, your subscription will automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. You can manage or cancel subscriptions through your Apple ID settings. Any unused portion of a free trial period will be forfeited when you purchase a subscription.",
-        changesTitle: "Changes to Terms",
-        changesBody: "We reserve the right to modify these terms at any time. Continued use of purchased features after changes constitutes acceptance of the new terms.",
-        contactTitle: "Contact",
-        contactBody: "For questions about these terms, contact: govomusic@gmail.com"
-      },
-      zh: {
-        pageTitle: "番茄钟购买条款",
-        lastUpdated: "最后更新：2026-03-18",
-        overviewTitle: "概述",
-        overviewBody: "本购买条款管辖番茄钟应用中任何付费功能、订阅或虚拟商品的购买和使用。完成购买即表示您同意这些条款。",
-        purchaseTitle: "购买",
-        purchaseBody: "番茄钟提供可选的应用内购买，包括高级主题、额外音效包和订阅计划。除法律另有规定外，所有购买均为最终购买，不可退款。价格以您的本地货币显示，并包含适用税费。",
-        paymentTitle: "支付",
-        paymentBody: "支付通过 Apple App Store 安全处理。您的支付信息由 Apple 处理，而非番茄钟。完成购买即表示您同意 Apple 的 App Store 购买条款和条件。",
-        refundTitle: "退款",
-        refundBody: "所有购买均为最终购买。购买完成后不可退款，除非适用消费者保护法律另有要求。退款请联系 Apple 客服。",
-        subscriptionTitle: "订阅",
-        subscriptionBody: "如果您订阅高级功能，除非在当前期限结束前至少 24 小时关闭自动续订，否则订阅将自动续订。您可以通过 Apple ID 设置管理或取消订阅。购买订阅时，免费试用期的任何未使用部分将被作废。",
-        changesTitle: "条款变更",
-        changesBody: "我们保留随时修改这些条款的权利。在更改后继续使用已购买的功能即表示接受新条款。",
-        contactTitle: "联系方式",
-        contactBody: "如有疑问，请联系：govomusic@gmail.com"
-      }
-    };
+            <div class="section">
+                <div id="legal-title" class="section-title">法律与协议</div>
+                <div id="legal-content" class="section-content"></div>
+            </div>
 
-    const params = new URLSearchParams(window.location.search);
-    const requested = (params.get("lang") || params.get("lan") || "en").toLowerCase();
-    const locale = translations[requested] ? requested : "en";
-    const t = translations[locale];
+            <div class="contact-box">
+                <div class="contact-icon">📧</div>
+                <div id="contact-title" class="contact-title">内购与订阅问题</div>
+                <a href="mailto:govomusic@gmail.com" class="contact-email">govomusic@gmail.com</a>
+            </div>
 
-    document.documentElement.lang = locale;
-    document.title = t.pageTitle;
-    document.getElementById("page-title").textContent = t.pageTitle;
-    document.getElementById("last-updated").textContent = t.lastUpdated;
-    document.getElementById("overview-title").textContent = t.overviewTitle;
-    document.getElementById("overview-body").textContent = t.overviewBody;
-    document.getElementById("purchase-title").textContent = t.purchaseTitle;
-    document.getElementById("purchase-body").textContent = t.purchaseBody;
-    document.getElementById("payment-title").textContent = t.paymentTitle;
-    document.getElementById("payment-body").textContent = t.paymentBody;
-    document.getElementById("refund-title").textContent = t.refundTitle;
-    document.getElementById("refund-body").textContent = t.refundBody;
-    document.getElementById("subscription-title").textContent = t.subscriptionTitle;
-    document.getElementById("subscription-body").textContent = t.subscriptionBody;
-    document.getElementById("changes-title").textContent = t.changesTitle;
-    document.getElementById("changes-body").textContent = t.changesBody;
-    document.getElementById("contact-title").textContent = t.contactTitle;
-    document.getElementById("contact-body").textContent = t.contactBody;
+            <div id="footer" class="footer">最后更新日期：2026年3月18日<br>© 2026 PomodoroClock. All rights reserved.</div>
+        </div>
+    </div>
 
-    const switcher = document.getElementById("lang-switcher");
-    const labels = { en: "English", zh: "简体中文" };
-    Object.keys(translations).forEach((key) => {
-      const link = document.createElement("a");
-      link.href = `?lang=${key}`;
-      link.textContent = labels[key] || key;
-      switcher.appendChild(link);
-    });
-  </script>
+    <script>
+        (function () {
+            var copy = {
+                zh: {
+                    htmlLang: 'zh-CN',
+                    docTitle: '服务条款（内购）- 番茄钟 PomodoroClock',
+                    logo: '番茄钟',
+                    pageTitle: '服务条款（内购）',
+                    introTitle: '条款说明',
+                    introHtml:
+                        '<p>欢迎使用番茄钟 PomodoroClock。本条款适用于本应用通过 Apple App Store 提供的内购与订阅服务。</p>' +
+                        '<p>当您购买任何内购项目时，即表示您同意受本条款、Apple 媒体服务条款以及 Apple 标准最终用户许可协议（EULA）约束。</p>',
+                    productTitle: '内购项目',
+                    productHtml:
+                        '<p>当前提供以下项目：</p>' +
+                        '<ul>' +
+                        '<li><strong>周订阅（weekly）</strong></li>' +
+                        '<li><strong>月度订阅（monthly）</strong></li>' +
+                        '<li><strong>年度订阅（yearly）</strong></li>' +
+                        '</ul>' +
+                        '<p>具体价格以您所在地区 App Store 实际显示为准。</p>',
+                    billingTitle: '订阅与计费规则',
+                    billingHtml:
+                        '<ul>' +
+                        '<li>订阅费用将通过您的 Apple ID 账户扣费。</li>' +
+                        '<li>自动续订订阅会在当前订阅周期结束前 24 小时内自动续费，除非您提前关闭自动续订。</li>' +
+                        '<li>您可在 Apple ID 的订阅管理中随时取消自动续订；取消后将在当前周期结束时生效。</li>' +
+                        '<li>如后续提供试用或优惠，具体规则以 App Store 页面展示及 Apple 结算规则为准。</li>' +
+                        '</ul>',
+                    restoreTitle: '管理与恢复购买',
+                    restoreHtml:
+                        '<ul>' +
+                        '<li>您可在应用内使用"恢复购买"以恢复已购买权益（同一 Apple ID）。</li>' +
+                        '<li>购买、退款和账单问题由 Apple 负责处理，请通过 Apple 官方渠道申请。</li>' +
+                        '<li>若恢复后权益未生效，请通过下方邮箱联系我们。</li>' +
+                        '</ul>',
+                    legalTitle: '法律与协议',
+                    legalHtml:
+                        '<p>Apple 标准最终用户许可协议（EULA）：<br><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>' +
+                        '<p>隐私政策：<br><a href="privacy-policy.html?lan=zh">privacy-policy.html?lan=zh</a></p>' +
+                        '<p>支持页面：<br><a href="../support/support.html?lan=zh">support.html?lan=zh</a></p>',
+                    contactTitle: '内购与订阅问题',
+                    footer: '最后更新日期：2026年3月18日<br>© 2026 PomodoroClock. All rights reserved.'
+                },
+                en: {
+                    htmlLang: 'en',
+                    docTitle: 'Terms of Service (In-App Purchases) - PomodoroClock',
+                    logo: 'PomodoroClock',
+                    pageTitle: 'Terms of Service (In-App Purchases)',
+                    introTitle: 'Overview',
+                    introHtml:
+                        '<p>Welcome to PomodoroClock. These terms apply to in-app purchases and subscriptions provided through the Apple App Store.</p>' +
+                        '<p>By purchasing any in-app product, you agree to these terms, Apple Media Services Terms, and Apple\'s Standard End User License Agreement (EULA).</p>',
+                    productTitle: 'Products',
+                    productHtml:
+                        '<p>Current products include:</p>' +
+                        '<ul>' +
+                        '<li><strong>Weekly Subscription (weekly)</strong></li>' +
+                        '<li><strong>Monthly Subscription (monthly)</strong></li>' +
+                        '<li><strong>Yearly Subscription (yearly)</strong></li>' +
+                        '</ul>' +
+                        '<p>Prices may vary by region and are shown in your local App Store.</p>',
+                    billingTitle: 'Subscription and Billing Rules',
+                    billingHtml:
+                        '<ul>' +
+                        '<li>Payment is charged to your Apple ID account at confirmation of purchase.</li>' +
+                        '<li>Auto-renewable subscriptions renew automatically unless auto-renew is turned off at least 24 hours before the end of the current period.</li>' +
+                        '<li>You can manage or cancel subscriptions in Apple ID subscription settings. Cancellation takes effect at the end of the current period.</li>' +
+                        '<li>If trials or promotions are offered in the future, terms shown on the App Store and Apple billing rules apply.</li>' +
+                        '</ul>',
+                    restoreTitle: 'Manage and Restore',
+                    restoreHtml:
+                        '<ul>' +
+                        '<li>You can use Restore Purchases in the app to recover entitlements under the same Apple ID.</li>' +
+                        '<li>Apple handles billing, refunds, and payment disputes through official Apple channels.</li>' +
+                        '<li>If your entitlement does not update after restore, contact us via the email below.</li>' +
+                        '</ul>',
+                    legalTitle: 'Legal and Policies',
+                    legalHtml:
+                        '<p>Apple Standard EULA:<br><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>' +
+                        '<p>Privacy Policy:<br><a href="privacy-policy.html?lan=en">privacy-policy.html?lan=en</a></p>' +
+                        '<p>Support Page:<br><a href="../support/support.html?lan=en">support.html?lan=en</a></p>',
+                    contactTitle: 'IAP & Subscription Support',
+                    footer: 'Last Updated: March 18, 2026<br>© 2026 PomodoroClock. All rights reserved.'
+                }
+            };
+
+            var params = new URLSearchParams(window.location.search);
+            var lan = params.get('lan') === 'en' ? 'en' : 'zh';
+            var t = copy[lan];
+
+            document.documentElement.lang = t.htmlLang;
+            document.title = t.docTitle;
+            document.getElementById('logo-text').textContent = t.logo;
+            document.getElementById('page-title').textContent = t.pageTitle;
+
+            document.getElementById('intro-title').textContent = t.introTitle;
+            document.getElementById('intro-content').innerHTML = t.introHtml;
+
+            document.getElementById('product-title').textContent = t.productTitle;
+            document.getElementById('product-content').innerHTML = t.productHtml;
+
+            document.getElementById('billing-title').textContent = t.billingTitle;
+            document.getElementById('billing-content').innerHTML = t.billingHtml;
+
+            document.getElementById('restore-title').textContent = t.restoreTitle;
+            document.getElementById('restore-content').innerHTML = t.restoreHtml;
+
+            document.getElementById('legal-title').textContent = t.legalTitle;
+            document.getElementById('legal-content').innerHTML = t.legalHtml;
+
+            document.getElementById('contact-title').textContent = t.contactTitle;
+            document.getElementById('footer').innerHTML = t.footer;
+
+            document.getElementById('switch-zh').classList.toggle('active', lan === 'zh');
+            document.getElementById('switch-en').classList.toggle('active', lan === 'en');
+        })();
+    </script>
 </body>
 </html>
