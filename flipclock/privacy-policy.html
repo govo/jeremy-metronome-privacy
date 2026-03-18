@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fanqie Focus Timer Privacy Policy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f6f3ee;
+      color: #161311;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    h1, h2 {
+      line-height: 1.2;
+      margin-top: 0;
+    }
+    h2 {
+      margin-top: 32px;
+    }
+    .meta {
+      color: #6d6259;
+      font-size: 14px;
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 28px;
+      font-size: 14px;
+    }
+    .lang-switcher a {
+      color: #8d4315;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="lang-switcher" id="lang-switcher"></nav>
+    <h1 id="page-title"></h1>
+    <p class="meta" id="last-updated"></p>
+
+    <h2 id="overview-title"></h2>
+    <p id="overview-body"></p>
+
+    <h2 id="collection-title"></h2>
+    <p id="collection-body"></p>
+
+    <h2 id="usage-title"></h2>
+    <p id="usage-body"></p>
+
+    <h2 id="local-storage-title"></h2>
+    <p id="local-storage-body"></p>
+
+    <h2 id="third-party-title"></h2>
+    <p id="third-party-body"></p>
+
+    <h2 id="choices-title"></h2>
+    <p id="choices-body"></p>
+
+    <h2 id="contact-title"></h2>
+    <p id="contact-body"></p>
+  </main>
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "PomodoroClock Privacy Policy",
+        lastUpdated: "Last updated: 2026-03-15",
+        overviewTitle: "Overview",
+        overviewBody: "Fanqie Focus Timer is a local-first focus timer app. This policy explains what information the app uses, what stays on your device, and where you must still confirm production details before launch.",
+        collectionTitle: "Information We Collect",
+        collectionBody: "The app stores timer settings, theme preferences, selected fonts, timer state snapshots, and any background image that you choose to import. If you use the optional voice duration feature, the app requests microphone and speech recognition access only when you actively start voice input. The current codebase does not show developer-operated account systems, analytics SDKs, ad SDKs, or cloud sync services.",
+        usageTitle: "How Information Is Used",
+        usageBody: "Stored information is used to run the timer, preserve your chosen appearance, restore session state, power widgets and Live Activities, and support optional voice-based duration entry. Imported background images are used only for your selected theme presentation.",
+        localStorageTitle: "On-Device Storage",
+        localStorageBody: "Preferences and timer state are stored locally using app storage. Theme and timer snapshots may also be shared locally through an App Group so the widget and Live Activity can reflect the current app state. Background images selected by you may be stored locally for reuse in the app and widget presentation.",
+        thirdPartyTitle: "Third-Party Services",
+        thirdPartyBody: "Based on the current repository, the app does not include developer-operated third-party analytics, advertising, or account backends. Optional speech and microphone features rely on Apple platform frameworks and are subject to Apple device permissions and platform behavior. You should re-check this policy before launch if additional SDKs are added.",
+        choicesTitle: "Your Choices",
+        choicesBody: "You can use the core timer without granting microphone, speech recognition, or photo library access. These permissions are optional and only needed for voice duration entry or custom background image selection. You can also remove a previously selected background image from the app settings.",
+        contactTitle: "Contact",
+        contactBody: "Contact us: govomusic@gmail.com"
+      },
+      zh: {
+        pageTitle: "番茄翻页钟隐私政策",
+        lastUpdated: "最后更新：2026-03-15",
+        overviewTitle: "概述",
+        overviewBody: "番茄翻页钟是一款以本地使用为主的专注计时 App。本政策说明该应用会使用哪些信息、哪些内容保留在你的设备上，以及上线前仍需由开发者再次确认的部分。",
+        collectionTitle: "我们收集的信息",
+        collectionBody: "App 会保存计时设置、主题偏好、所选字体、计时状态快照，以及你主动导入的背景图片。如果你使用可选的语音设置时长功能，App 只会在你主动开启语音输入时请求麦克风和语音识别权限。按照当前代码仓库，应用内未发现开发者自建账号系统、统计分析 SDK、广告 SDK 或云同步服务。",
+        usageTitle: "信息如何被使用",
+        usageBody: "这些信息用于运行计时器、保存你的外观设置、恢复会话状态、驱动小组件与 Live Activity 展示，以及支持可选的语音设定时长能力。你导入的背景图仅用于你选择的主题展示。",
+        localStorageTitle: "本地存储",
+        localStorageBody: "偏好设置和计时状态保存在本地。主题与计时快照也可能通过 App Group 在本地共享，以便小组件和 Live Activity 反映当前状态。你选择的背景图可能会保存在本地，供 App 与小组件展示时复用。",
+        thirdPartyTitle: "第三方服务",
+        thirdPartyBody: "根据当前仓库代码，应用未集成开发者自建的第三方统计、广告或账号后端。可选的语音与麦克风能力依赖 Apple 平台框架，并受系统权限与平台行为影响。如果上线前新增了其他 SDK，请重新核对本政策。",
+        choicesTitle: "你的选择",
+        choicesBody: "你无需授予麦克风、语音识别或相册权限也可以使用核心计时功能。这些权限仅在你需要语音设定时长或上传自定义背景图时才需要。你也可以在设置中移除已选择的背景图。",
+        contactTitle: "联系方式",
+        contactBody: "联系我们：govomusic@gmail.com"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const requested = (params.get("lang") || params.get("lan") || "en").toLowerCase();
+    const locale = translations[requested] ? requested : "en";
+    const t = translations[locale];
+
+    document.documentElement.lang = locale;
+    document.title = t.pageTitle;
+    document.getElementById("page-title").textContent = t.pageTitle;
+    document.getElementById("last-updated").textContent = t.lastUpdated;
+    document.getElementById("overview-title").textContent = t.overviewTitle;
+    document.getElementById("overview-body").textContent = t.overviewBody;
+    document.getElementById("collection-title").textContent = t.collectionTitle;
+    document.getElementById("collection-body").textContent = t.collectionBody;
+    document.getElementById("usage-title").textContent = t.usageTitle;
+    document.getElementById("usage-body").textContent = t.usageBody;
+    document.getElementById("local-storage-title").textContent = t.localStorageTitle;
+    document.getElementById("local-storage-body").textContent = t.localStorageBody;
+    document.getElementById("third-party-title").textContent = t.thirdPartyTitle;
+    document.getElementById("third-party-body").textContent = t.thirdPartyBody;
+    document.getElementById("choices-title").textContent = t.choicesTitle;
+    document.getElementById("choices-body").textContent = t.choicesBody;
+    document.getElementById("contact-title").textContent = t.contactTitle;
+    document.getElementById("contact-body").textContent = t.contactBody;
+
+    const switcher = document.getElementById("lang-switcher");
+    const labels = { en: "English", zh: "简体中文" };
+    Object.keys(translations).forEach((key) => {
+      const link = document.createElement("a");
+      link.href = `?lang=${key}`;
+      link.textContent = labels[key] || key;
+      switcher.appendChild(link);
+    });
+  </script>
+</body>
+</html>

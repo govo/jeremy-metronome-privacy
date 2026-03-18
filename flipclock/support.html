@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PomodoroClock Support</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #111111;
+      color: #f4efe7;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    h1, h2 {
+      line-height: 1.2;
+      margin-top: 0;
+    }
+    h2 {
+      margin-top: 32px;
+    }
+    a {
+      color: #ff9a52;
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 0 28px;
+      font-size: 14px;
+    }
+    .lang-switcher a {
+      color: #ffb47d;
+      text-decoration: none;
+    }
+    .contact-box {
+      background: linear-gradient(135deg, #2a1f1a 0%, #1a1512 100%);
+      border: 1px solid #ff9a52;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 16px;
+      text-align: center;
+    }
+    .contact-box .email {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ff9a52;
+      display: block;
+      margin-top: 8px;
+      word-break: break-all;
+    }
+    .contact-box .label {
+      font-size: 14px;
+      color: #a89f94;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="lang-switcher" id="lang-switcher"></nav>
+    <h1 id="page-title"></h1>
+    <p id="intro"></p>
+
+    <h2 id="getting-started-title"></h2>
+    <p id="getting-started-body"></p>
+
+    <h2 id="faq-title"></h2>
+    <p id="faq-body"></p>
+
+    <h2 id="troubleshooting-title"></h2>
+    <p id="troubleshooting-body"></p>
+
+    <h2 id="contact-title"></h2>
+    <div id="contact-wrapper">
+      <p id="contact-body"></p>
+      <div class="contact-box">
+        <span class="label" id="contact-label"></span>
+        <a class="email" href="mailto:govomusic@gmail.com" id="contact-email"></a>
+      </div>
+    </div>
+  </main>
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "PomodoroClock Support",
+        intro: "PomodoroClock is a scene-based focus timer with guided breathing for real rest. This page provides essential support information and should be hosted publicly before App Store submission.",
+        gettingStartedTitle: "Getting Started",
+        gettingStartedBody: "Open the app and select a scene (Study, Work, or Meditation) to start a focus session. Use Settings to adjust focus, short break, and long break durations. You can also customize colors, fonts, and background images. Widgets and Live Activities reflect the current timer state after a session starts.",
+        faqTitle: "Common Questions",
+        faqBody: "PomodoroClock is designed as a dedicated timer, not a task manager. Scene switching helps you quickly enter the right focus mode. Guided breathing during breaks uses techniques like 4-7-8 breathing to genuinely relax. Microphone and speech recognition are optional and only needed for voice duration entry. Photo library access is optional and only used when choosing a custom background image.",
+        troubleshootingTitle: "Troubleshooting",
+        troubleshootingBody: "If widgets or Live Activities do not refresh, start a new timer session and ensure the device supports those features. If voice duration entry is unavailable, check microphone and speech recognition permissions. If a custom background does not appear, re-select the image from Settings.",
+        contactTitle: "Contact Us",
+        contactBody: "We'd love to hear from you! If you have any questions, suggestions, or need support, please reach out:",
+        contactLabel: "Email",
+        contactEmail: "govomusic@gmail.com"
+      },
+      zh: {
+        pageTitle: "番茄钟支持页面",
+        intro: "番茄钟是一款场景化专注计时应用，配备呼吸引导帮助休息时真正放松。本页提供上线所需的基础支持文案，提交 App Store 前应先公开部署。",
+        gettingStartedTitle: "快速开始",
+        gettingStartedBody: "打开 App 后，选择学习、工作或冥想场景即可开始专注。你可以在设置中调整专注、短休息和长休息时长，也可以自定义颜色、字体和背景图。开始计时后，小组件与 Live Activity 会同步显示当前状态。",
+        faqTitle: "常见问题",
+        faqBody: "番茄钟是一个专用计时器，不是任务管理器。场景切换帮助你快速进入对应的专注模式。休息时的呼吸引导使用4-7-8呼吸法帮助你真正放松。麦克风和语音识别权限为可选权限，仅在语音设定时长时需要。相册权限为可选权限，仅在选择自定义背景图时使用。",
+        troubleshootingTitle: "故障排查",
+        troubleshootingBody: "如果小组件或 Live Activity 没有刷新，请先启动新的计时会话，并确认设备支持相关功能。如果语音设定时长不可用，请检查麦克风和语音识别权限。如果自定义背景图未生效，请在设置中重新选择图片。",
+        contactTitle: "联系我们",
+        contactBody: "我们期待你的反馈！如有任何问题、建议或需要支持，请随时联系我们：",
+        contactLabel: "邮箱",
+        contactEmail: "govomusic@gmail.com"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const requested = (params.get("lang") || params.get("lan") || "en").toLowerCase();
+    const locale = translations[requested] ? requested : "en";
+    const t = translations[locale];
+
+    document.documentElement.lang = locale;
+    document.title = t.pageTitle;
+    document.getElementById("page-title").textContent = t.pageTitle;
+    document.getElementById("intro").textContent = t.intro;
+    document.getElementById("getting-started-title").textContent = t.gettingStartedTitle;
+    document.getElementById("getting-started-body").textContent = t.gettingStartedBody;
+    document.getElementById("faq-title").textContent = t.faqTitle;
+    document.getElementById("faq-body").textContent = t.faqBody;
+    document.getElementById("troubleshooting-title").textContent = t.troubleshootingTitle;
+    document.getElementById("troubleshooting-body").textContent = t.troubleshootingBody;
+    document.getElementById("contact-title").textContent = t.contactTitle;
+    document.getElementById("contact-body").textContent = t.contactBody;
+    document.getElementById("contact-label").textContent = t.contactLabel;
+    document.getElementById("contact-email").textContent = t.contactEmail;
+
+    const switcher = document.getElementById("lang-switcher");
+    const labels = { en: "English", zh: "简体中文" };
+    Object.keys(translations).forEach((key) => {
+      const link = document.createElement("a");
+      link.href = `?lang=${key}`;
+      link.textContent = labels[key] || key;
+      switcher.appendChild(link);
+    });
+  </script>
+</body>
+</html>
