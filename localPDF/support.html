@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - LocalPDF</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: #f5f5f7;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 32px; font-weight: 600; color: #1d1d1f; margin-bottom: 8px; }
+        .header .subtitle { font-size: 16px; color: #86868b; }
+        .contact-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .contact-card .email-label { font-size: 14px; color: #86868b; margin-bottom: 8px; }
+        .contact-card .email { font-size: 20px; font-weight: 600; color: #005a9e; text-decoration: none; }
+        .contact-card .email:hover { text-decoration: underline; }
+        .content {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .content h2 { font-size: 20px; font-weight: 600; color: #1d1d1f; margin: 32px 0 16px; }
+        .content h2:first-child { margin-top: 0; }
+        .content p { font-size: 15px; color: #1d1d1f; margin-bottom: 16px; }
+        .faq-item { margin-bottom: 24px; }
+        .faq-item h3 { font-size: 16px; font-weight: 600; color: #1d1d1f; margin-bottom: 8px; }
+        .faq-item p { margin-bottom: 0; color: #515154; }
+        .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+        .feature-card { background: #f5f5f7; border-radius: 12px; padding: 20px; text-align: center; }
+        .feature-card .icon { font-size: 28px; margin-bottom: 8px; }
+        .feature-card .name { font-size: 14px; font-weight: 600; color: #1d1d1f; }
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ffffff;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #1d1d1f;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .lang-switch:hover { background: #f5f5f7; }
+        .footer { text-align: center; margin-top: 40px; font-size: 13px; color: #86868b; }
+
+        /* Language switching - default English */
+        .en { display: block; }
+        .zh { display: none; }
+
+        /* When lang=zh, show Chinese */
+        html[lang="zh"] .en { display: none; }
+        html[lang="zh"] .zh { display: block; }
+    </style>
+</head>
+<body>
+    <a href="?lang=zh" class="lang-switch" id="langBtn">中文</a>
+    <div class="container">
+        <div class="header">
+            <h1 class="en">Support</h1>
+            <h1 class="zh">技术支持</h1>
+            <p class="subtitle en">LocalPDF - Offline PDF Toolkit</p>
+            <p class="subtitle zh">LocalPDF - 离线 PDF 工具箱</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="email-label en">Email us at</p>
+            <p class="email-label zh">联系我们</p>
+            <a href="mailto:support@localpdf.app" class="email">support@localpdf.app</a>
+        </div>
+
+        <div class="content">
+            <h2 class="en">Getting Started</h2>
+            <h2 class="zh">开始使用</h2>
+
+            <p class="en">LocalPDF is designed to be intuitive and easy to use. All PDF processing happens locally on your device, ensuring your files never leave your hands.</p>
+            <p class="zh">LocalPDF 设计简洁直观，易于使用。所有 PDF 处理均在您的设备本地完成，确保您的文件绝不离开您的手中。</p>
+
+            <h2 class="en">Features</h2>
+            <h2 class="zh">功能特点</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📄</div>
+                    <div class="name en">Merge & Split</div>
+                    <div class="name zh">合并与拆分</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🖼️</div>
+                    <div class="name en">Convert Format</div>
+                    <div class="name zh">格式转换</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📦</div>
+                    <div class="name en">Compress</div>
+                    <div class="name zh">压缩</div>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <div class="name en">Encrypt</div>
+                    <div class="name zh">加密</div>
+                </div>
+            </div>
+
+            <h2 class="en">FAQ</h2>
+            <h2 class="zh">常见问题</h2>
+
+            <div class="faq-item">
+                <h3 class="en">Is LocalPDF really offline?</h3>
+                <h3 class="zh">LocalPDF 真的是离线运行吗？</h3>
+                <p class="en">Yes. All PDF processing operations are performed entirely on your device using WebAssembly technology. Your files are never uploaded to any server.</p>
+                <p class="zh">是的。所有 PDF 处理操作均使用 WebAssembly 技术在您的设备上完全本地完成。您的文件绝不会上传至任何服务器。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="en">How do I merge multiple PDFs?</h3>
+                <h3 class="zh">如何合并多个 PDF？</h3>
+                <p class="en">Open the Merge PDF tool, select your files, drag to reorder them, then tap the merge button. Your combined PDF will be ready in seconds.</p>
+                <p class="zh">打开合并 PDF 工具，选择您的文件，拖拽调整顺序，然后点击合并按钮。合并后的 PDF 将在几秒钟内准备就绪。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="en">What formats are supported?</h3>
+                <h3 class="zh">支持哪些格式？</h3>
+                <p class="en">We support PDF, PNG, JPG, Word (DOC/DOCX), PowerPoint (PPT/PPTX), Excel (XLS/XLSX), and plain text formats.</p>
+                <p class="zh">我们支持 PDF、PNG、JPG、Word (DOC/DOCX)、PowerPoint (PPT/PPTX)、Excel (XLS/XLSX) 以及纯文本格式。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="en">How does compression work?</h3>
+                <h3 class="zh">压缩是如何工作的？</h3>
+                <p class="en">Choose from low, medium, or high compression levels. Higher compression reduces file size more aggressively while maintaining readability.</p>
+                <p class="zh">您可以选择低、中、高三种压缩等级。更高压缩会更大程度减小文件体积，同时保持可读性。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="en">Can I add watermarks?</h3>
+                <h3 class="zh">可以添加水印吗？</h3>
+                <p class="en">Yes. Use the Add Watermark feature to add text or image watermarks with customizable opacity, position, and tiling options.</p>
+                <p class="zh">可以。使用添加水印功能可以添加文本或图片水印，并可自定义透明度、位置和平铺方式。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="en">How do I upgrade to Pro?</h3>
+                <h3 class="zh">如何升级到 Pro？</h3>
+                <p class="en">Go to the Profile tab, tap Subscribe, and choose your preferred plan. Pro unlocks all features and removes limitations.</p>
+                <p class="zh">进入"我的"标签页，点击订阅，选择您偏好的方案。Pro 将解锁所有功能并解除限制。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="en">How do I restore my purchase?</h3>
+                <h3 class="zh">如何恢复购买？</h3>
+                <p class="en">Go to Profile > Restore Purchase. If you have an active subscription associated with your Apple ID, it will be restored automatically.</p>
+                <p class="zh">进入"我的" > "恢复购买"。如果您有与 Apple ID 关联的有效订阅，它将自动恢复。</p>
+            </div>
+
+            <h2 class="en">Contact Us</h2>
+            <h2 class="zh">联系我们</h2>
+
+            <p class="en">For any questions, feedback, or bug reports, please reach out to us at:</p>
+            <p class="zh">如有任何问题、反馈或错误报告，请通过以下方式联系我们：</p>
+
+            <p><strong>support@localpdf.app</strong></p>
+            <p class="en">We typically respond within 24-48 hours on business days.</p>
+            <p class="zh">我们通常在工作日 24-48 小时内回复。</p>
+        </div>
+
+        <div class="footer">
+            <p class="en">Thank you for choosing LocalPDF</p>
+            <p class="zh">感谢您选择 LocalPDF</p>
+        </div>
+    </div>
+    <script>
+        (function() {
+            var isZh = window.location.search.indexOf('lang=zh') !== -1;
+            document.documentElement.lang = isZh ? 'zh' : 'en';
+            document.getElementById('langBtn').href = isZh ? '?lang=en' : '?lang=zh';
+            document.getElementById('langBtn').textContent = isZh ? 'English' : '中文';
+        })();
+    </script>
+</body>
+</html>
