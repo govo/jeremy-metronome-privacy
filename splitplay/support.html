@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplitPlay Support</title>
+  <style>
+    :root {
+      --bg: #0e1420;
+      --card: #141d2b;
+      --text: #f4f7fb;
+      --muted: #b9c4d3;
+      --line: rgba(255,255,255,0.08);
+      --accent: #62a6ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1d2b41 0%, #0e1420 48%, #0a1018 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .hero, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 16px 44px rgba(0,0,0,0.22);
+    }
+    .hero { margin-bottom: 20px; }
+    h1 { margin: 0 0 10px; font-size: 34px; }
+    h2 { margin: 0 0 8px; font-size: 20px; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); }
+    .email {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .lang {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .footer-lang {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="content"></div>
+  </main>
+  <script>
+    const lang = new URLSearchParams(window.location.search).get("lang") === "zh" ? "zh" : "en";
+    const content = {
+      en: `
+        <section class="hero">
+          <h1>SplitPlay Support</h1>
+          <p>Need help with import, stem separation, playback, or subscription? We're here to help.</p>
+          <a class="email" href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>
+        </section>
+        <div class="grid">
+          <section class="card">
+            <h2>What we can help with</h2>
+            <ul>
+              <li>Importing audio or video from Files or Photos</li>
+              <li>Recording audio or practice video</li>
+              <li>On-device stem separation and playback</li>
+              <li>A/B loop and saved sections</li>
+              <li>Subscription restore and Pro access</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>When contacting us</h2>
+            <p>Please include:</p>
+            <ul>
+              <li>App version</li>
+              <li>Device model and iOS version</li>
+              <li>Description of the issue</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>Quick tips</h2>
+            <ul>
+              <li>Recording fails? Check microphone/camera permissions in iOS Settings.</li>
+              <li>Can't import from Photos? Verify Photos permission is enabled.</li>
+              <li>Subscription not recognized? Try "Restore Purchases" in Settings first.</li>
+              <li>Export limited? You may be on the Free plan—check Settings.</li>
+            </ul>
+          </section>
+        </div>
+        <div class="footer-lang"><a href="?lang=zh">中文</a> / <a href="?lang=en">English</a></div>
+      `,
+      zh: `
+        <section class="hero">
+          <h1>练轨 支持页面</h1>
+          <p>如果在导入、分轨、播放或订阅方面遇到问题，我们随时为你提供帮助。</p>
+          <a class="email" href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>
+        </section>
+        <div class="grid">
+          <section class="card">
+            <h2>支持范围</h2>
+            <ul>
+              <li>从文件或相册导入音频、视频</li>
+              <li>录音与练习视频录制</li>
+              <li>设备端分轨与播放</li>
+              <li>A/B 循环与练习段保存</li>
+              <li>恢复购买与 Pro 权限</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>联系时建议提供</h2>
+            <ul>
+              <li>应用版本号</li>
+              <li>设备型号与 iOS 版本</li>
+              <li>问题描述</li>
+            </ul>
+          </section>
+          <section class="card">
+            <h2>常见问题排查</h2>
+            <ul>
+              <li>录音失败？请在 iOS 设置中检查麦克风/相机权限。</li>
+              <li>无法从相册导入？请确认相册权限已开启。</li>
+              <li>订阅未识别？请先在设置中尝试"恢复购买"。</li>
+              <li>导出受限？你可能处于免费版——请查看设置确认。</li>
+            </ul>
+          </section>
+        </div>
+        <div class="footer-lang"><a href="?lang=zh">中文</a> / <a href="?lang=en">English</a></div>
+      `
+    };
+    document.getElementById("content").innerHTML = content[lang];
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  </script>
+</body>
+</html>

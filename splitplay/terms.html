@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplitPlay Terms of Use</title>
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --card: #ffffff;
+      --text: #1f272f;
+      --muted: #66717d;
+      --line: #e4e7ec;
+      --accent: #b56a1f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #fff7ed 0%, #fbfaf7 180px);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 36px rgba(31, 39, 47, 0.07);
+    }
+    h1 { margin: 0 0 12px; font-size: 32px; }
+    h2 { margin: 26px 0 8px; font-size: 20px; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); }
+    ul { padding-left: 20px; }
+    .lang { margin-bottom: 18px; font-size: 14px; }
+    .footer-lang {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" id="content"></section>
+  </main>
+  <script>
+    const lang = new URLSearchParams(window.location.search).get("lang") === "zh" ? "zh" : "en";
+    const content = {
+      en: `
+        <h1>SplitPlay Terms of Use</h1>
+        <p>Last updated: May 2, 2026</p>
+        <p>These Terms of Use govern access to and use of the SplitPlay app. By using the app, you agree to these terms and to Apple's applicable terms for App Store services.</p>
+        <h2>Service overview</h2>
+        <p>SplitPlay helps musicians practice by separating audio into stems (vocals, drums, bass, other) on your device. All processing happens locally—no audio or video is uploaded to any server.</p>
+        <h2>Your media</h2>
+        <ul>
+          <li>You retain full ownership of any media you import or record.</li>
+          <li>You are responsible for ensuring you have the right to use media you process.</li>
+          <li>Media stays on your device—we never upload your files.</li>
+        </ul>
+        <h2>Acceptable use</h2>
+        <ul>
+          <li>Do not use the app to process media you don't have rights to.</li>
+          <li>Do not use the app in ways that violate copyright or applicable law.</li>
+        </ul>
+        <h2>Subscription plans</h2>
+        <p>SplitPlay offers a Pro subscription (¥68/year). This price is for reference only. Final pricing and availability are determined by the App Store listing at the time of purchase.</p>
+        <h2>Billing</h2>
+        <p>Payment is charged to your Apple ID at confirmation of purchase. Subscriptions renew automatically unless cancelled at least 24 hours before the renewal date.</p>
+        <h2>Refunds</h2>
+        <p>Refunds are handled by Apple per App Store policies. Please use Apple's report-a-problem process to request refunds.</p>
+        <h2>Disclaimer</h2>
+        <p>SplitPlay is provided "as available." We disclaim warranties regarding uninterrupted service, media compatibility, and fitness for a particular purpose to the extent permitted by law.</p>
+        <h2>Changes</h2>
+        <p>We may update these terms as the product evolves. Continued use after updates means you accept the revised terms.</p>
+        <h2>Contact</h2>
+        <p>Questions? Contact <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>.</p>
+        <div class="footer-lang"><a href="?lang=zh">中文</a> / <a href="?lang=en">English</a></div>
+      `,
+      zh: `
+        <h1>练轨 使用条款</h1>
+        <p>最后更新：2026年5月2日</p>
+        <p>本使用条款适用于你对练轨应用的访问与使用。使用本应用即表示你同意这些条款，以及 Apple 针对 App Store 服务适用的相关条款。</p>
+        <h2>服务说明</h2>
+        <p>练轨帮助音乐人通过在设备端将音频分轨（人声、鼓、贝斯、其他）来进行练习。所有处理都在本地完成——不会上传任何音频或视频到服务器。</p>
+        <h2>你的媒体</h2>
+        <ul>
+          <li>你保留对导入或录制媒体的所有权。</li>
+          <li>你需要自行确认对处理的媒体拥有合法使用权利。</li>
+          <li>媒体保存在你的设备上——我们绝不会上传你的文件。</li>
+        </ul>
+        <h2>可接受使用</h2>
+        <ul>
+          <li>不得处理你没有权利使用的媒体。</li>
+          <li>不得以违反版权或适用法律的方式使用本应用。</li>
+        </ul>
+        <h2>订阅套餐</h2>
+        <p>练轨提供 Pro 订阅（¥68/年）。此价格仅供参考，最终价格和可用性以购买时 App Store 页面显示为准。</p>
+        <h2>计费</h2>
+        <p>购买时费用会从你的 Apple ID 扣款。订阅会自动续订，除非你在续订日期前至少 24 小时取消。</p>
+        <h2>退款</h2>
+        <p>退款由 Apple 按 App Store 政策处理。请使用 Apple 的问题报告流程申请退款。</p>
+        <h2>免责声明</h2>
+        <p>练轨按"现状"提供。在法律允许范围内，我们不对服务不中断、媒体兼容性或特定用途适用性作额外保证。</p>
+        <h2>条款变更</h2>
+        <p>随着产品更新，我们可能会调整本条款。新版条款发布后，继续使用应用即表示你接受更新后的内容。</p>
+        <h2>联系我们</h2>
+        <p>如有疑问，请联系 <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>。</p>
+        <div class="footer-lang"><a href="?lang=zh">中文</a> / <a href="?lang=en">English</a></div>
+      `
+    };
+    document.getElementById("content").innerHTML = content[lang];
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  </script>
+</body>
+</html>

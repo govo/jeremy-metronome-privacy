@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplitPlay Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #18202a;
+      --muted: #5d6978;
+      --line: #d9dee7;
+      --accent: #0f6fff;
+      --highlight: #e8f5e9;
+      --highlight-text: #2e7d32;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 40px rgba(24, 32, 42, 0.06);
+    }
+    h1, h2 { line-height: 1.2; }
+    h1 { margin: 0 0 12px; font-size: 32px; }
+    h2 { margin: 28px 0 10px; font-size: 20px; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .lang {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .footer-lang {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e9f1ff;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: var(--highlight);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .highlight-box p {
+      margin: 0;
+      color: var(--highlight-text);
+      font-weight: 500;
+    }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" id="content"></section>
+  </main>
+  <script>
+    const lang = new URLSearchParams(window.location.search).get("lang") === "zh" ? "zh" : "en";
+    const content = {
+      en: `
+        <div class="topline">
+          <div>
+            <span class="badge">Privacy Policy</span>
+            <h1>SplitPlay Privacy Policy</h1>
+            <p>Last updated: May 2, 2026</p>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <p>All media processing happens 100% on your device. We never upload your audio or video files to any server.</p>
+        </div>
+        <h2>Our privacy principle</h2>
+        <p>SplitPlay is designed with your privacy as a top priority. <strong>We do NOT collect, upload, or transmit any audio, video, or personal data to external servers.</strong> All stem separation, playback, and processing happens locally on your device using on-device AI models.</p>
+        <h2>What data we access (and why)</h2>
+        <p>We only access the following data when you explicitly grant permission and solely for the stated purpose:</p>
+        <ul>
+          <li><strong>Microphone</strong>: To record your practice audio. Recordings stay on your device.</li>
+          <li><strong>Camera</strong>: To record practice videos. Videos stay on your device.</li>
+          <li><strong>Photo Library</strong>: To import videos you already have. We only access files you select.</li>
+        </ul>
+        <h2>Data storage</h2>
+        <ul>
+          <li>All imported media, recordings, separation results, saved sections, and history are stored locally on your device only.</li>
+          <li>We do not have any backend servers that receive your media files.</li>
+          <li>Data remains until you manually delete it or remove the app.</li>
+        </ul>
+        <h2>Third-party services</h2>
+        <p>We use RevenueCat for subscription management. Subscription purchases are processed by Apple. RevenueCat may handle subscription state locally on your device—they do not receive your media files.</p>
+        <p>If you connect additional services in the future, this policy will be updated accordingly.</p>
+        <h2>Your choices</h2>
+        <ul>
+          <li>Delete any saved projects within the app</li>
+          <li>Uninstall the app to remove all local data</li>
+          <li>Manage or cancel subscriptions via your Apple account settings</li>
+        </ul>
+        <h2>Children</h2>
+        <p>SplitPlay is not designed to collect personal information from children.</p>
+        <h2>Contact</h2>
+        <p>For privacy questions, contact: <a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a></p>
+        <div class="footer-lang"><a href="?lang=zh">中文</a> / <a href="?lang=en">English</a></div>
+      `,
+      zh: `
+        <div class="topline">
+          <div>
+            <span class="badge">隐私政策</span>
+            <h1>练轨 隐私政策</h1>
+            <p>最后更新：2026年5月2日</p>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <p>所有媒体处理 100% 在你的设备上完成。我们绝不会上传你的音频或视频文件到任何服务器。</p>
+        </div>
+        <h2>我们的隐私原则</h2>
+        <p>练轨的设计将隐私保护作为首要考量。<strong>我们不收集、不上传、也不传输任何音频、视频或个人数据到外部服务器。</strong>所有分轨、播放和处理都在你的设备上本地完成，使用设备端 AI 模型。</p>
+        <h2>我们访问哪些数据（以及为什么）</h2>
+        <p>我们仅在你明确授权时访问以下数据，且仅用于所述目的：</p>
+        <ul>
+          <li><strong>麦克风</strong>：用于录制练习音频。录音仅保存在你的设备上。</li>
+          <li><strong>相机</strong>：用于录制练习视频。视频仅保存在你的设备上。</li>
+          <li><strong>相册</strong>：用于导入你已有的视频。我们仅访问你选择的文件。</li>
+        </ul>
+        <h2>数据存储</h2>
+        <ul>
+          <li>所有导入的媒体、录音、分轨结果、保存的段落和历史记录仅保存在你的设备本地。</li>
+          <li>我们没有任何接收你媒体文件的后端服务器。</li>
+          <li>数据会一直保留，直到你手动删除或卸载应用。</li>
+        </ul>
+        <h2>第三方服务</h2>
+        <p>我们使用 RevenueCat 管理订阅。订阅购买由 Apple 处理。RevenueCat 仅在你的设备上本地处理订阅状态——他们不会收到你的媒体文件。</p>
+        <p>如果你将来连接其他服务，我们将相应更新本政策。</p>
+        <h2>你的选择</h2>
+        <ul>
+          <li>在应用内删除任何已保存的项目</li>
+          <li>卸载应用以移除所有本地数据</li>
+          <li>通过 Apple 账户设置管理或取消订阅</li>
+        </ul>
+        <h2>儿童隐私</h2>
+        <p>练轨不为收集儿童个人信息而设计。</p>
+        <h2>联系我们</h2>
+        <p>如果你对隐私政策有疑问，请联系：<a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a></p>
+        <div class="footer-lang"><a href="?lang=zh">中文</a> / <a href="?lang=en">English</a></div>
+      `
+    };
+    document.getElementById("content").innerHTML = content[lang];
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  </script>
+</body>
+</html>
