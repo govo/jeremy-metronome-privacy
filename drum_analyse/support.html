@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drummy 技术支持</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #fafafa;
+      color: #1c1c1e;
+      line-height: 1.7;
+      padding: 24px 16px 80px;
+    }
+    .container { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 32px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .lang-switch { max-width: 720px; margin: 0 auto 12px; text-align: right; font-size: 14px; }
+    .lang-switch a { color: #007aff; text-decoration: none; margin-left: 12px; }
+    .lang-switch a.active { color: #1c1c1e; font-weight: 600; }
+    h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    h2 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+    h3 { font-size: 15px; font-weight: 600; margin: 14px 0 4px; color: #1c1c1e; }
+    p, li { font-size: 15px; color: #3a3a3c; }
+    ul, ol { padding-left: 20px; margin: 6px 0 12px; }
+    li { margin-bottom: 4px; }
+    .updated { color: #8e8e93; font-size: 13px; margin-bottom: 20px; }
+    a { color: #007aff; }
+    .divider { height: 1px; background: #e5e5ea; margin: 20px 0; border: 0; }
+    @media (max-width: 480px) { .container { padding: 24px 18px; } h1 { font-size: 22px; } }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <a href="?lang=cn" data-lang="cn">中文</a>
+    <a href="?lang=en" data-lang="en">English</a>
+  </div>
+  <div class="container">
+    <h1 data-i18n="title">技术支持</h1>
+    <p class="updated" data-i18n="updated">最后更新：2026 年 6 月 29 日</p>
+
+    <p data-i18n="intro">感谢您选择 Drummy。本页面提供常见问题的解答、故障排查指引与联系方式。如本页未能解决您的问题，请通过下方任一渠道联系我们，我们会在收到后尽快回复。</p>
+
+    <h2 data-i18n="h2_contact">一、联系我们</h2>
+    <p data-i18n="contact_p1">我们提供以下支持渠道：</p>
+    <ul>
+      <li data-i18n="contact_l1"><strong>应用内反馈</strong>：前往「设置 > 反馈」直接向我们发送问题与日志。</li>
+      <li data-i18n="contact_l2"><strong>电子邮件</strong>：<a href="mailto:govomusic@gmail.com">govomusic@gmail.com</a>（邮件标题请简述问题，便于快速分派）。</li>
+      <li data-i18n="contact_l3"><strong>响应时效</strong>：通常在 1–3 个工作日内回复；节假日可能顺延。</li>
+    </ul>
+    <p data-i18n="contact_p2" style="margin-top:6px;">为了更快地帮您定位问题，邮件中请尽量提供：</p>
+    <ul>
+      <li data-i18n="contact_info_l1">Drummy 版本号（在「设置 > 关于」中查看）；</li>
+      <li data-i18n="contact_info_l2">设备型号与系统版本；</li>
+      <li data-i18n="contact_info_l3">问题的简要描述、复现步骤与必要的截图或录屏；</li>
+      <li data-i18n="contact_info_l4">订单号（如涉及订阅与付费）。</li>
+    </ul>
+
+    <h2 data-i18n="h2_faq">二、常见问题 (FAQ)</h2>
+
+    <h3 data-i18n="faq1_q">1. 如何订阅 / 取消 Drummy Pro？</h3>
+    <p data-i18n="faq1_a">您可以在 App Store 账户的「订阅」中管理订阅，或在应用内前往 Pro 升级页查看当前订阅状态。取消后，您仍可在当期订阅期间内继续使用 Pro 功能，到期后将自动停止续费。</p>
+
+    <h3 data-i18n="faq2_q">2. 如何申请退款？</h3>
+    <p data-i18n="faq2_a">退款由 Apple 单独决定，请通过 App Store > 账户 > 购买记录 >「报告问题」提交申请。本应用开发者无法直接处理退款。</p>
+
+    <h3 data-i18n="faq3_q">3. 识别结果不准确怎么办？</h3>
+    <p data-i18n="faq3_a">请确保原音频清晰、节拍可辨，避开 BGM 复杂或失真较大的片段；若仍不理想，可在识别结果上手动微调节拍位置，再保存为 PRESET 重复使用。</p>
+
+    <h3 data-i18n="faq4_q">4. PRESET 如何同步到其他设备？</h3>
+    <p data-i18n="faq4_a">PRESET 默认保存在本机。在 iOS 16 / iPadOS 16 及以上且开启 iCloud Drive 的设备上，可通过「设置 > Apple ID > iCloud > iCloud Drive」开启 Drummy 的同步权限，以在多台设备间同步。</p>
+
+    <h3 data-i18n="faq5_q">5. 变速练习如何使用？</h3>
+    <p data-i18n="faq5_a">在播放器中拖动速度滑块，或点击预设档位（0.5x / 0.75x / 1.0x / 1.25x），即可实时改变播放速度，节拍网格与节拍提示音会同步调整。</p>
+
+    <h3 data-i18n="faq6_q">6. 误触购买后能取消吗？</h3>
+    <p data-i18n="faq6_a">可以。请尽快在 iOS 设备的「设置」>「[您的姓名]」>「订阅」中找到对应订阅项并取消；如需退款，请通过 App Store 官方渠道提交申请。</p>
+
+    <h2 data-i18n="h2_trouble">三、故障排除</h2>
+
+    <h3 data-i18n="trouble1_q">没有声音 / 声音很小</h3>
+    <ol>
+      <li data-i18n="trouble1_s1">检查设备静音开关和系统音量；</li>
+      <li data-i18n="trouble1_s2">确认未连接蓝牙耳机或外放未切换到其他输出设备；</li>
+      <li data-i18n="trouble1_s3">关闭可能占用音频路由的应用（通话、录屏、其他播放器）；</li>
+      <li data-i18n="trouble1_s4">重启 Drummy，必要时重启设备。</li>
+    </ol>
+
+    <h3 data-i18n="trouble2_q">应用卡顿 / 性能问题</h3>
+    <ol>
+      <li data-i18n="trouble2_s1">关闭后台不用的应用，释放内存；</li>
+      <li data-i18n="trouble2_s2">检查设备剩余存储，建议保留至少 500 MB 可用空间；</li>
+      <li data-i18n="trouble2_s3">在应用内关闭不必要的实时效果；</li>
+      <li data-i18n="trouble2_s4">升级到最新版本的 Drummy 与系统。</li>
+    </ol>
+
+    <h3 data-i18n="trouble3_q">识别 / 生成失败</h3>
+    <ol>
+      <li data-i18n="trouble3_s1">确认设备已联网（识别与生成需要在线服务）；</li>
+      <li data-i18n="trouble3_s2">检查文件格式（建议 WAV / AAC / MP3，采样率 44.1 kHz 及以上）；</li>
+      <li data-i18n="trouble3_s3">避开受数字版权保护 (DRM) 的音频；</li>
+      <li data-i18n="trouble3_s4">若长时间无响应，请重启应用后再试。</li>
+    </ol>
+
+    <h3 data-i18n="trouble4_q">订阅状态不更新 / Pro 功能未解锁</h3>
+    <ol>
+      <li data-i18n="trouble4_s1">打开 App Store > 账户 > 购买记录，确认订阅已生效；</li>
+      <li data-i18n="trouble4_s2">在 Drummy 内前往「设置 > 恢复购买」刷新订阅状态；</li>
+      <li data-i18n="trouble4_s3">退出并重新登录 Apple ID；</li>
+      <li data-i18n="trouble4_s4">若仍异常，请通过上方邮箱联系我们，并附上订单号。</li>
+    </ol>
+
+    <h2 data-i18n="h2_sys">四、系统与设备要求</h2>
+    <ul>
+      <li data-i18n="sys_l1"><strong>系统版本</strong>：iOS 16.0 / iPadOS 16.0 / macOS 13.0 及以上（Mac Catalyst）。</li>
+      <li data-i18n="sys_l2"><strong>设备</strong>：iPhone / iPad / Mac（Apple Silicon 或 Intel）。老旧机型可能存在功能限制。</li>
+      <li data-i18n="sys_l3"><strong>存储空间</strong>：建议保留至少 500 MB 可用空间，用于本地缓存与 PRESET。</li>
+      <li data-i18n="sys_l4"><strong>网络</strong>：识别、生成等在线功能需要稳定的网络连接；本地播放与编辑离线可用。</li>
+      <li data-i18n="sys_l5"><strong>权限</strong>：麦克风（用于录制与识别，仅在您主动启用时申请）；媒体库 / 文件（用于导入您设备中的音频文件）。</li>
+    </ul>
+  </div>
+
+  <script>
+    const I18N = {
+      cn: {
+        htmlLang: 'zh-CN',
+        title: 'Drummy 技术支持',
+        active: 'cn',
+        updated: '最后更新：2026 年 6 月 29 日',
+        intro: '感谢您选择 Drummy。本页面提供常见问题的解答、故障排查指引与联系方式。如本页未能解决您的问题，请通过下方任一渠道联系我们，我们会在收到后尽快回复。',
+        h2_contact: '一、联系我们',
+        contact_p1: '我们提供以下支持渠道：',
+        contact_l1: '应用内反馈：前往「设置 > 反馈」直接向我们发送问题与日志。',
+        contact_l2: '电子邮件：govomusic@gmail.com（邮件标题请简述问题，便于快速分派）。',
+        contact_l3: '响应时效：通常在 1–3 个工作日内回复；节假日可能顺延。',
+        contact_p2: '为了更快地帮您定位问题，邮件中请尽量提供：',
+        contact_info_l1: 'Drummy 版本号（在「设置 > 关于」中查看）；',
+        contact_info_l2: '设备型号与系统版本；',
+        contact_info_l3: '问题的简要描述、复现步骤与必要的截图或录屏；',
+        contact_info_l4: '订单号（如涉及订阅与付费）。',
+        h2_faq: '二、常见问题 (FAQ)',
+        faq1_q: '1. 如何订阅 / 取消 Drummy Pro？',
+        faq1_a: '您可以在 App Store 账户的「订阅」中管理订阅，或在应用内前往 Pro 升级页查看当前订阅状态。取消后，您仍可在当期订阅期间内继续使用 Pro 功能，到期后将自动停止续费。',
+        faq2_q: '2. 如何申请退款？',
+        faq2_a: '退款由 Apple 单独决定，请通过 App Store > 账户 > 购买记录 >「报告问题」提交申请。本应用开发者无法直接处理退款。',
+        faq3_q: '3. 识别结果不准确怎么办？',
+        faq3_a: '请确保原音频清晰、节拍可辨，避开 BGM 复杂或失真较大的片段；若仍不理想，可在识别结果上手动微调节拍位置，再保存为 PRESET 重复使用。',
+        faq4_q: '4. PRESET 如何同步到其他设备？',
+        faq4_a: 'PRESET 默认保存在本机。在 iOS 16 / iPadOS 16 及以上且开启 iCloud Drive 的设备上，可通过「设置 > Apple ID > iCloud > iCloud Drive」开启 Drummy 的同步权限，以在多台设备间同步。',
+        faq5_q: '5. 变速练习如何使用？',
+        faq5_a: '在播放器中拖动速度滑块，或点击预设档位（0.5x / 0.75x / 1.0x / 1.25x），即可实时改变播放速度，节拍网格与节拍提示音会同步调整。',
+        faq6_q: '6. 误触购买后能取消吗？',
+        faq6_a: '可以。请尽快在 iOS 设备的「设置」>「[您的姓名]」>「订阅」中找到对应订阅项并取消；如需退款，请通过 App Store 官方渠道提交申请。',
+        h2_trouble: '三、故障排除',
+        trouble1_q: '没有声音 / 声音很小',
+        trouble1_s1: '检查设备静音开关和系统音量；',
+        trouble1_s2: '确认未连接蓝牙耳机或外放未切换到其他输出设备；',
+        trouble1_s3: '关闭可能占用音频路由的应用（通话、录屏、其他播放器）；',
+        trouble1_s4: '重启 Drummy，必要时重启设备。',
+        trouble2_q: '应用卡顿 / 性能问题',
+        trouble2_s1: '关闭后台不用的应用，释放内存；',
+        trouble2_s2: '检查设备剩余存储，建议保留至少 500 MB 可用空间；',
+        trouble2_s3: '在应用内关闭不必要的实时效果；',
+        trouble2_s4: '升级到最新版本的 Drummy 与系统。',
+        trouble3_q: '识别 / 生成失败',
+        trouble3_s1: '确认设备已联网（识别与生成需要在线服务）；',
+        trouble3_s2: '检查文件格式（建议 WAV / AAC / MP3，采样率 44.1 kHz 及以上）；',
+        trouble3_s3: '避开受数字版权保护 (DRM) 的音频；',
+        trouble3_s4: '若长时间无响应，请重启应用后再试。',
+        trouble4_q: '订阅状态不更新 / Pro 功能未解锁',
+        trouble4_s1: '打开 App Store > 账户 > 购买记录，确认订阅已生效；',
+        trouble4_s2: '在 Drummy 内前往「设置 > 恢复购买」刷新订阅状态；',
+        trouble4_s3: '退出并重新登录 Apple ID；',
+        trouble4_s4: '若仍异常，请通过上方邮箱联系我们，并附上订单号。',
+        h2_sys: '四、系统与设备要求',
+        sys_l1: '系统版本：iOS 16.0 / iPadOS 16.0 / macOS 13.0 及以上（Mac Catalyst）。',
+        sys_l2: '设备：iPhone / iPad / Mac（Apple Silicon 或 Intel）。老旧机型可能存在功能限制。',
+        sys_l3: '存储空间：建议保留至少 500 MB 可用空间，用于本地缓存与 PRESET。',
+        sys_l4: '网络：识别、生成等在线功能需要稳定的网络连接；本地播放与编辑离线可用。',
+        sys_l5: '权限：麦克风（用于录制与识别，仅在您主动启用时申请）；媒体库 / 文件（用于导入您设备中的音频文件）。'
+      },
+      en: {
+        htmlLang: 'en',
+        title: 'Drummy Technical Support',
+        active: 'en',
+        updated: 'Last updated: June 29, 2026',
+        intro: 'Thank you for choosing Drummy. This page provides answers to common questions, troubleshooting guidance, and our contact details. If you cannot find a solution here, please reach out through any of the channels below and we will get back to you as soon as possible.',
+        h2_contact: '1. Contact Us',
+        contact_p1: 'You can reach our support team through the following channels:',
+        contact_l1: 'In-App Feedback: go to "Settings > Feedback" to send us your question and logs directly.',
+        contact_l2: 'Email: govomusic@gmail.com (please use a concise subject line so we can route it quickly).',
+        contact_l3: 'Response Time: we typically reply within 1–3 business days; holidays may cause a short delay.',
+        contact_p2: 'To help us diagnose the issue faster, please include the following in your message:',
+        contact_info_l1: 'Your Drummy version (available in "Settings > About");',
+        contact_info_l2: 'Your device model and OS version;',
+        contact_info_l3: 'A brief description of the issue, the steps to reproduce it, and screenshots or screen recordings if possible;',
+        contact_info_l4: 'The order number (for subscription or billing questions).',
+        h2_faq: '2. Frequently Asked Questions',
+        faq1_q: '1. How do I subscribe to or cancel Drummy Pro?',
+        faq1_a: 'You can manage your subscription from your App Store account under "Subscriptions", or check your current status on the Pro upgrade page inside the app. After you cancel, you will keep Pro access until the end of the current billing period, and it will not renew automatically.',
+        faq2_q: '2. How do I request a refund?',
+        faq2_a: 'Refunds are handled solely by Apple. Please submit your request via App Store > Account > Purchase History > "Report a Problem". The developer of this app cannot issue refunds directly.',
+        faq3_q: '3. The recognition result is not accurate. What can I do?',
+        faq3_a: 'Please make sure the source audio is clear with a discernible beat, and avoid clips with dense BGM or heavy distortion. If the result is still not ideal, you can fine-tune the beat positions manually and save them as a PRESET for reuse.',
+        faq4_q: '4. How do I sync PRESETs to another device?',
+        faq4_a: 'PRESETs are saved locally by default. On devices running iOS 16 / iPadOS 16 or later with iCloud Drive enabled, you can allow Drummy to sync via "Settings > Apple ID > iCloud > iCloud Drive" and have your PRESETs available across devices.',
+        faq5_q: '5. How do I use the tempo drill?',
+        faq5_a: 'In the player, drag the tempo slider or tap a preset (0.5x / 0.75x / 1.0x / 1.25x) to change the playback speed in real time. The beat grid and click track will adjust accordingly.',
+        faq6_q: '6. I made a purchase by mistake. Can I cancel it?',
+        faq6_a: 'Yes. Please go to "Settings > [Your Name] > Subscriptions" on your iOS device and cancel the corresponding subscription as soon as possible. If you would like a refund, please submit the request through the official App Store channel.',
+        h2_trouble: '3. Troubleshooting',
+        trouble1_q: 'No sound or very low volume',
+        trouble1_s1: 'Check the device\'s silent switch and system volume;',
+        trouble1_s2: 'Make sure no Bluetooth headphones or other audio outputs are connected;',
+        trouble1_s3: 'Close other apps that may be holding the audio route (calls, screen recording, other players);',
+        trouble1_s4: 'Restart Drummy, and restart the device if needed.',
+        trouble2_q: 'App lag or performance issues',
+        trouble2_s1: 'Close unused apps running in the background to free up memory;',
+        trouble2_s2: 'Check available storage; we recommend keeping at least 500 MB free;',
+        trouble2_s3: 'Turn off any heavy real-time effects inside the app;',
+        trouble2_s4: 'Update to the latest version of Drummy and your system.',
+        trouble3_q: 'Recognition or generation failed',
+        trouble3_s1: 'Make sure your device is online (recognition and generation require network access);',
+        trouble3_s2: 'Check the file format (WAV / AAC / MP3 with a sample rate of 44.1 kHz or higher is recommended);',
+        trouble3_s3: 'Avoid audio files protected by DRM (digital rights management);',
+        trouble3_s4: 'If the app becomes unresponsive, please restart it and try again.',
+        trouble4_q: 'Subscription status not updated / Pro features not unlocked',
+        trouble4_s1: 'Open App Store > Account > Purchase History and confirm that the subscription is active;',
+        trouble4_s2: 'In Drummy, go to "Settings > Restore Purchases" to refresh the subscription status;',
+        trouble4_s3: 'Sign out of your Apple ID and sign back in;',
+        trouble4_s4: 'If the issue persists, please contact us at the email above and include your order number.',
+        h2_sys: '4. System and Device Requirements',
+        sys_l1: 'Operating System: iOS 16.0 / iPadOS 16.0 / macOS 13.0 or later (Mac Catalyst).',
+        sys_l2: 'Device: iPhone / iPad / Mac (Apple Silicon or Intel). Older devices may have limited functionality.',
+        sys_l3: 'Storage: at least 500 MB of free space is recommended for local cache and PRESETs.',
+        sys_l4: 'Network: a stable internet connection is required for online features such as recognition and generation. Local playback and editing work offline.',
+        sys_l5: 'Permissions: Microphone (for recording and recognition, requested only when you actively enable it); Media Library / Files (for importing audio from your device).'
+      }
+    };
+
+    function getLang() {
+      const params = new URLSearchParams(window.location.search);
+      const lang = (params.get('lang') || '').toLowerCase();
+      if (lang === 'en' || lang === 'cn') return lang;
+      const nav = (navigator.language || '').toLowerCase();
+      return nav.startsWith('zh') ? 'cn' : 'en';
+    }
+
+    function applyLang(lang) {
+      const dict = I18N[lang] || I18N.cn;
+      document.documentElement.lang = dict.htmlLang;
+      document.title = dict.title;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] != null) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-switch a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-lang') === lang);
+      });
+      if (!window.location.search.includes('lang=')) {
+        const u = new URL(window.location.href);
+        u.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', u);
+      }
+    }
+
+    applyLang(getLang());
+  </script>
+</body>
+</html>
