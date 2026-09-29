@@ -408,8 +408,8 @@
       <p class="sub" data-i18n="faq3_q">03 · 识别结果不准确怎么办？</p>
       <p data-i18n="faq3_a">请确保原音频清晰、节拍可辨，避开 BGM 复杂或失真较大的片段；若仍不理想，可在识别结果上手动微调节拍位置，再保存为 PRESET 重复使用。</p>
 
-      <p class="sub" data-i18n="faq4_q">04 · PRESET 如何同步到其他设备？</p>
-      <p data-i18n="faq4_a">PRESET 默认保存在本机。在 iOS 16 / iPadOS 16 及以上且开启 iCloud Drive 的设备上，可通过 <span class="path">设置 · Apple ID · iCloud · iCloud Drive</span> 开启 鼓分析 的同步权限。</p>
+      <p class="sub" data-i18n="faq4_q">04 · PRESET 会同步到其他设备吗？</p>
+      <p data-i18n="faq4_a">不会。PRESET 保存在本机应用沙盒内，应用不使用 iCloud，也不会上传到服务器。需要在多台设备间迁移时，可以导出 PRESET 文件，在另一台设备上用「导入 PRESET」打开。</p>
 
       <p class="sub" data-i18n="faq5_q">05 · 变速练习如何使用？</p>
       <p data-i18n="faq5_a">在播放器中拖动速度滑块，或点击预设档位（0.5x / 0.75x / 1.0x / 1.25x），即可实时改变播放速度，节拍网格与节拍提示音会同步调整。</p>
@@ -443,7 +443,7 @@
 
       <p class="sub" data-i18n="trouble3_q">识别 / 生成失败</p>
       <ol>
-        <li data-i18n="trouble3_s1">确认设备已联网（识别与生成需要在线服务）；</li>
+        <li data-i18n="trouble3_s1">确认应用已更新到最新版本（识别模型随版本更新）；</li>
         <li data-i18n="trouble3_s2">检查文件格式（建议 WAV / AAC / MP3，采样率 44.1 kHz 及以上）；</li>
         <li data-i18n="trouble3_s3">避开受数字版权保护 (DRM) 的音频；</li>
         <li data-i18n="trouble3_s4">若长时间无响应，请重启应用后再试。</li>
@@ -502,7 +502,7 @@
         <div class="sys-item">
           <div class="k" data-i18n="sys_net_k">Network</div>
           <div class="v" data-i18n="sys_net_v">Wi-Fi / Cellular</div>
-          <div class="desc" data-i18n="sys_net_desc">识别与生成需联网；本地播放离线可用</div>
+          <div class="desc" data-i18n="sys_net_desc">识别与生成全部在设备本地完成，音频不会上传；播放同样离线可用</div>
         </div>
         <div class="sys-item">
           <div class="k" data-i18n="sys_perm_mic_k">Permission · Mic</div>
@@ -576,8 +576,8 @@
         faq2_a: '退款由 Apple 单独决定，请通过「App Store · 账户 · 购买记录 · 报告问题」提交申请。本应用开发者无法直接处理退款。',
         faq3_q: '03 · 识别结果不准确怎么办？',
         faq3_a: '请确保原音频清晰、节拍可辨，避开 BGM 复杂或失真较大的片段；若仍不理想，可在识别结果上手动微调节拍位置，再保存为 PRESET 重复使用。',
-        faq4_q: '04 · PRESET 如何同步到其他设备？',
-        faq4_a: 'PRESET 默认保存在本机。在 iOS 16 / iPadOS 16 及以上且开启 iCloud Drive 的设备上，可通过「设置 · Apple ID · iCloud · iCloud Drive」开启 鼓分析 的同步权限。',
+        faq4_q: '04 · PRESET 会同步到其他设备吗？',
+        faq4_a: '不会。PRESET 保存在本机应用沙盒内，应用不使用 iCloud，也不会上传到服务器。需要在多台设备间迁移时，可以导出 PRESET 文件，在另一台设备上用「导入 PRESET」打开。',
         faq5_q: '05 · 变速练习如何使用？',
         faq5_a: '在播放器中拖动速度滑块，或点击预设档位（0.5x / 0.75x / 1.0x / 1.25x），即可实时改变播放速度，节拍网格与节拍提示音会同步调整。',
         faq6_q: '06 · Humanize（人性化）是什么？',
@@ -596,7 +596,7 @@
         trouble2_s3: '在「设置 · FX」中关闭不必要的实时效果；',
         trouble2_s4: '升级到最新版本的 鼓分析 与系统。',
         trouble3_q: '识别 / 生成失败',
-        trouble3_s1: '确认设备已联网（识别与生成需要在线服务）；',
+        trouble3_s1: '确认应用已更新到最新版本（识别模型随版本更新）；',
         trouble3_s2: '检查文件格式（建议 WAV / AAC / MP3，采样率 44.1 kHz 及以上）；',
         trouble3_s3: '避开受数字版权保护 (DRM) 的音频；',
         trouble3_s4: '若长时间无响应，请重启应用后再试。',
@@ -628,7 +628,7 @@
         sys_storage_desc: '用于本地缓存与 PRESET',
         sys_net_k: 'Network',
         sys_net_v: 'Wi-Fi / Cellular',
-        sys_net_desc: '识别与生成需联网；本地播放离线可用',
+        sys_net_desc: '识别与生成全部在设备本地完成，音频不会上传；播放同样离线可用',
         sys_perm_mic_k: 'Permission · Mic',
         sys_perm_mic_v: '录制与识别',
         sys_perm_mic_desc: '主动启用时申请',
@@ -682,8 +682,8 @@
         faq2_a: 'Refunds are handled solely by Apple. Submit your request via App Store · Account · Purchase History · Report a Problem. The developer cannot issue refunds directly.',
         faq3_q: '03 · The recognition result is not accurate. What can I do?',
         faq3_a: 'Make sure the source audio is clear with a discernible beat, and avoid clips with dense BGM or heavy distortion. You can fine-tune the beat positions manually and save them as a PRESET for reuse.',
-        faq4_q: '04 · How do I sync PRESETs to another device?',
-        faq4_a: 'PRESETs are saved locally by default. On devices running iOS 16 / iPadOS 16 or later with iCloud Drive enabled, allow DrumAnalyse to sync via Settings · Apple ID · iCloud · iCloud Drive.',
+        faq4_q: '04 · Do PRESETs sync to my other devices?',
+        faq4_a: 'No. PRESETs are stored locally inside the app sandbox; the app does not use iCloud and does not upload them to a server. To move presets between devices, export a PRESET file and open it on the other device with "Import PRESET".',
         faq5_q: '05 · How do I use the tempo drill?',
         faq5_a: 'In the player, drag the tempo slider or tap a preset (0.5x / 0.75x / 1.0x / 1.25x) to change playback speed in real time. The beat grid and click track will adjust accordingly.',
         faq6_q: '06 · What is Humanize?',
@@ -702,7 +702,7 @@
         trouble2_s3: 'Turn off heavy real-time effects in Settings · FX;',
         trouble2_s4: 'Update to the latest version of DrumAnalyse and your system.',
         trouble3_q: 'Recognition or generation failed',
-        trouble3_s1: 'Make sure your device is online (recognition and generation require network);',
+        trouble3_s1: 'Make sure the app is up to date (the recognition models ship with app updates);',
         trouble3_s2: 'Check the file format (WAV / AAC / MP3 with a sample rate of 44.1 kHz or higher is recommended);',
         trouble3_s3: 'Avoid audio files protected by DRM;',
         trouble3_s4: 'If the app becomes unresponsive, please restart it and try again.',
@@ -734,7 +734,7 @@
         sys_storage_desc: 'For local cache and PRESETs',
         sys_net_k: 'Network',
         sys_net_v: 'Wi-Fi / Cellular',
-        sys_net_desc: 'Recognition & generation need a stable connection. Playback and editing work offline.',
+        sys_net_desc: 'Recognition and generation run entirely on-device, and your audio is never uploaded. Playback works offline too.',
         sys_perm_mic_k: 'Permission · Mic',
         sys_perm_mic_v: 'Recording & recognition',
         sys_perm_mic_desc: 'Requested only when you enable it',

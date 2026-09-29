@@ -2,8 +2,8 @@
 
 > 适用平台：iOS / iPadOS / macOS（Mac Catalyst）
 > 联系方式：govomusic@gmail.com
-> 隐私政策：`market/privacy.html`
-> 服务条款：`market/terms.html`
+> 隐私政策：https://govo.github.io/jeremy-metronome-privacy/drum_analyse/privacy.html
+> 服务条款：https://govo.github.io/jeremy-metronome-privacy/drum_analyse/terms.html
 
 ---
 
@@ -93,7 +93,8 @@ iPhone、iPad、Mac（Mac Catalyst）共享同一份工程，桌面端调试、�
 — 联系我们 —
 
 反馈与建议：govomusic@gmail.com
-服务条款与隐私政策请见应用内"设置 > 关于"。
+隐私政策：https://govo.github.io/jeremy-metronome-privacy/drum_analyse/privacy.html
+服务条款：https://govo.github.io/jeremy-metronome-privacy/drum_analyse/terms.html
 
 Drummy 致力于把"AI + 专业鼓机 + 练习"做成真正能上舞台的工具。
 ```
@@ -188,7 +189,8 @@ Subscription period and price are shown on the App Store subscription page. Canc
 — CONTACT —
 
 Feedback and feature requests: govomusic@gmail.com
-See Terms of Service and Privacy Policy in the app under Settings > About.
+Privacy Policy: https://govo.github.io/jeremy-metronome-privacy/drum_analyse/privacy.html
+Terms of Service: https://govo.github.io/jeremy-metronome-privacy/drum_analyse/terms.html
 
 Drummy is built to put "AI + pro drum machine + practice" in a single tool that's ready for the stage.
 ```
